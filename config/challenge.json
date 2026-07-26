@@ -1,0 +1,50 @@
+{
+    "challengeName": "Python Master Challenge",
+    "version": "2.2",
+    "questionsPerAttempt": 10,
+    "timeLimitMinutes": 60,
+    "autoSaveSeconds": 30,
+    "passingPercentage": 70,
+    "difficultyLevels": {
+        "easy": 20,
+        "medium": 20,
+        "hard": 20
+    },
+    "navigation": {
+        "allowPrevious": true,
+        "allowNext": true,
+        "allowJump": true
+    },
+    "editor": {
+        "language": "python",
+        "starterCodeEnabled": true,
+        "resetCodeOnNewQuestion": false
+    },
+    "evaluation": {
+        "runVisibleTestCases": true,
+        "submitHiddenTestCases": true,
+        "showPassedCases": true,
+        "showFailedCases": true
+    },
+    "rewards": {
+        "xpPerAccepted": 100,
+        "coinsPerAccepted": 50,
+        "perfectBonusXP": 500,
+        "perfectBonusCoins": 250
+    },
+    "questionSchema": {
+        "id": "",
+        "title": "",
+        "topic": "",
+        "difficulty": "",
+        "statement": "",
+        "inputFormat": "",
+        "outputFormat": "",
+        "constraints": "",
+        "sampleInput": "",
+        "sampleOutput": "",
+        "starterCode": "",
+        "visibleTestCases": [],
+        "hiddenTestCases": []
+    }
+}
