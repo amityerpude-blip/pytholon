@@ -1,0 +1,1000 @@
+{
+  "id": "H001",
+  "title": "Library Transaction Report Generator",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "PM SHRI Kendriya Vidyalaya has digitized its library system. Every book transaction (Issue/Return) is stored in a text file named 'library.txt'. Each line contains one transaction in the following format:\n\nBookID | StudentName | Class | Transaction | Days\n\nExample:\nB101|Aman|12A|Issue|0\nB102|Riya|11B|Return|3\nB103|Karan|12A|Return|8\n\nThe librarian wants an automated report to identify overdue books, calculate fines, and generate a daily summary.",
+
+  "statement": "Write a Python program that reads 'library.txt' and performs the following tasks:\n\n1. Count the total number of transactions.\n2. Count the total number of books issued.\n3. Count the total number of books returned.\n4. Display the names of students who returned books after 7 days.\n5. Calculate the fine for every late return using ₹5 per extra day after the first 7 days.\n6. Display the student with the highest fine.\n7. Save all late-return records into a new text file named 'late_returns.txt'.\n8. Display the total fine collected.",
+
+  "inputFormat": "The input file 'library.txt' is available in the current directory. Each line follows the format:\nBookID|StudentName|Class|Transaction|Days",
+
+  "outputFormat": "Display a formatted report showing:\n- Total Transactions\n- Books Issued\n- Books Returned\n- Late Return Students\n- Highest Fine\n- Total Fine Collected\nAlso create a file named 'late_returns.txt' containing only late-return records.",
+
+  "constraints": [
+    "The file contains 100 to 5000 records.",
+    "Transaction is either 'Issue' or 'Return'.",
+    "Days is a non-negative integer.",
+    "A return after more than 7 days is considered late."
+  ],
+
+  "sampleInput": [
+    "B101|Aman|12A|Issue|0",
+    "B102|Riya|11B|Return|3",
+    "B103|Karan|12A|Return|10",
+    "B104|Neha|11A|Return|15"
+  ],
+
+  "sampleOutput": {
+    "Total Transactions": 4,
+    "Books Issued": 1,
+    "Books Returned": 3,
+    "Late Return Students": [
+      "Karan",
+      "Neha"
+    ],
+    "Highest Fine": {
+      "Student": "Neha",
+      "Fine": 40
+    },
+    "Total Fine Collected": 55,
+    "Generated File": "late_returns.txt"
+  },
+
+  "starterCode": "def generateLibraryReport():\n    fileName='library.txt'\n\n    # Write your solution here\n\n\ngenerateLibraryReport()",
+
+  "visibleTestCases": [
+    {
+      "input": "4 valid records with one late return",
+      "expected": "Correct transaction count and one record written to late_returns.txt"
+    },
+    {
+      "input": "Only Issue transactions",
+      "expected": "No late returns and total fine = 0"
+    },
+    {
+      "input": "Multiple late returns",
+      "expected": "Highest fine and total fine calculated correctly"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single record",
+    "5000 transaction records",
+    "All records are late returns",
+    "No return transactions",
+    "Days exactly equal to 7",
+    "Multiple students with the same highest fine"
+  ],
+
+  "explanation": "Use text file handling to read each line, split the fields using '|', process Issue and Return records separately, calculate fines only for returns after 7 days, write late-return records into a new text file, and generate the required summary.",
+
+  "xp": 250,
+
+  "coins": 150
+}
+{
+  "id": "H002",
+  "title": "Railway Reservation Waiting List Manager",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A railway station stores all passenger reservation records in a text file named 'reservation.txt'. Every record contains one passenger in the following format:\n\nPNR|Passenger Name|Train No|Class|Status\n\nExample:\n101001|Aman|18237|SL|CNF\n101002|Riya|18237|3A|WL\n101003|Karan|12810|2A|RAC\n\nAfter some passengers cancel their tickets, the reservation system must automatically promote passengers from RAC to Confirmed (CNF) and from Waiting List (WL) to RAC.",
+
+  "statement": "Write a Python program that reads 'reservation.txt' and performs the following tasks:\n\n1. Count the total number of passengers.\n2. Display the number of Confirmed (CNF), RAC and Waiting List (WL) passengers.\n3. Upgrade every RAC passenger to CNF.\n4. Upgrade every WL passenger to RAC.\n5. Save the updated reservation records into a new file named 'updated_reservation.txt'.\n6. Display the total number of passengers whose status was upgraded.\n7. Search for a passenger using a PNR entered by the user and display complete reservation details. If the PNR is not found, display 'Passenger Not Found'.",
+
+  "inputFormat": "The file 'reservation.txt' contains one passenger record per line in the following format:\nPNR|Passenger Name|Train No|Class|Status",
+
+  "outputFormat": "Display:\n- Total Passengers\n- CNF Count\n- RAC Count\n- WL Count\n- Total Upgraded Passengers\n- Search Result\n\nCreate a file named 'updated_reservation.txt' containing the modified reservation records.",
+
+  "constraints": [
+    "The file contains between 100 and 5000 records.",
+    "Status is one of CNF, RAC or WL.",
+    "PNR numbers are unique.",
+    "Do not modify passenger names or train details."
+  ],
+
+  "sampleInput": [
+    "101001|Aman|18237|SL|CNF",
+    "101002|Riya|18237|3A|WL",
+    "101003|Karan|12810|2A|RAC",
+    "Search PNR : 101003"
+  ],
+
+  "sampleOutput": {
+    "Total Passengers": 3,
+    "CNF": 1,
+    "RAC": 1,
+    "WL": 1,
+    "Passengers Upgraded": 2,
+    "Search Result": "101003 | Karan | 12810 | 2A | CNF",
+    "Generated File": "updated_reservation.txt"
+  },
+
+  "starterCode": "def reservationManager():\n    fileName='reservation.txt'\n\n    # Write your solution here\n\n\nreservationManager()",
+
+  "visibleTestCases": [
+    {
+      "input": "Records containing CNF, RAC and WL passengers",
+      "expected": "All RAC become CNF and all WL become RAC"
+    },
+    {
+      "input": "All passengers already confirmed",
+      "expected": "No upgrades should occur"
+    },
+    {
+      "input": "Search using an invalid PNR",
+      "expected": "Passenger Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty reservation file",
+    "Single passenger record",
+    "5000 passenger records",
+    "All passengers in Waiting List",
+    "All passengers in RAC",
+    "PNR search for first record",
+    "PNR search for last record"
+  ],
+
+  "explanation": "Read every record from the text file, split fields using '|', count passenger categories, update reservation status according to the rules, save the modified records into a new text file, and perform a linear search using the entered PNR.",
+
+  "xp": 275,
+
+  "coins": 175
+}
+{
+  "id": "H003",
+  "title": "School Lost and Found Management System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A school maintains a 'lostfound.txt' file containing details of all lost items reported by students. Each record is stored in the following format:\n\nItemID|ItemName|StudentName|Class|Status\n\nStatus can be either LOST or RETURNED.\n\nThe principal wants an application that can generate useful reports, quickly search for an item, and prepare a sorted list of all pending lost items.",
+
+  "statement": "Write a Python program to read 'lostfound.txt' and perform the following tasks:\n\n1. Count the total number of records.\n2. Display the total number of LOST items.\n3. Display the total number of RETURNED items.\n4. Search for an item using Item ID entered by the user.\n5. Display complete details if the item is found; otherwise display 'Item Not Found'.\n6. Create a new text file named 'pending_items.txt' containing only LOST items.\n7. Sort all LOST items alphabetically by Item Name and save them into 'sorted_pending.txt'.\n8. Display the first and last item in the sorted pending list.\n9. Display the class that has reported the maximum number of LOST items.",
+
+  "inputFormat": "The file 'lostfound.txt' contains one record per line in the format:\nItemID|ItemName|StudentName|Class|Status",
+
+  "outputFormat": "Display:\n- Total Records\n- Total LOST Items\n- Total RETURNED Items\n- Search Result\n- First Pending Item\n- Last Pending Item\n\nGenerate two files:\n1. pending_items.txt\n2. sorted_pending.txt",
+
+  "constraints": [
+    "The file contains between 100 and 5000 records.",
+    "Each Item ID is unique.",
+    "Status is either LOST or RETURNED.",
+    "Sorting should be in ascending alphabetical order of Item Name."
+  ],
+
+  "sampleInput": [
+    "L101|Water Bottle|Aman|12A|LOST",
+    "L102|Calculator|Riya|11B|RETURNED",
+    "L103|School Bag|Neha|10A|LOST",
+    "L104|Geometry Box|Rohan|9C|LOST",
+    "Search Item ID : L103"
+  ],
+
+  "sampleOutput": {
+    "Total Records": 4,
+    "LOST Items": 3,
+    "RETURNED Items": 1,
+    "Search Result": "L103 | School Bag | Neha | 10A | LOST",
+    "First Pending Item": "Geometry Box",
+    "Last Pending Item": "Water Bottle",
+    "Maximum Lost Reports": "Class 10A",
+    "Generated Files": [
+      "pending_items.txt",
+      "sorted_pending.txt"
+    ]
+  },
+
+  "starterCode": "def lostAndFoundManager():\n    fileName='lostfound.txt'\n\n    # Write your solution here\n\n\nlostAndFoundManager()",
+
+  "visibleTestCases": [
+    {
+      "input": "Records containing LOST and RETURNED items",
+      "expected": "Pending files created and search works correctly"
+    },
+    {
+      "input": "Search using an invalid Item ID",
+      "expected": "Item Not Found"
+    },
+    {
+      "input": "All items are RETURNED",
+      "expected": "No pending items and empty pending_items.txt"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single record",
+    "5000 records",
+    "All items LOST",
+    "Duplicate item names with different IDs",
+    "Search first record",
+    "Search last record"
+  ],
+
+  "explanation": "Read the text file line by line, separate fields using the '|' delimiter, perform searching using Item ID, create a file containing only pending items, sort pending items alphabetically by Item Name, generate the required reports, and save the sorted list into another text file.",
+
+  "xp": 300,
+
+  "coins": 200
+}
+{
+  "id": "H004",
+  "title": "Employee Attendance Log Analyzer",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A company stores the daily attendance of its employees in a text file named 'attendance.txt'. Each line of the file contains the attendance details of one employee in the following format:\n\nEmployeeID|EmployeeName|Department|Status|WorkingHours\n\nStatus can be Present (P), Absent (A) or Leave (L).\n\nThe HR department wants a program to analyse attendance records, identify employees who worked overtime, generate absentee reports and prepare department-wise attendance statistics.",
+
+  "statement": "Write a Python program that reads 'attendance.txt' and performs the following tasks:\n\n1. Count the total number of employee records.\n2. Display the number of Present, Absent and Leave employees.\n3. Display the names of all employees who worked more than 8 hours.\n4. Calculate the total overtime hours (Working Hours - 8).\n5. Search an employee using Employee ID entered by the user.\n6. Generate a new text file named 'absent.txt' containing only absent employee records.\n7. Generate another text file named 'overtime.txt' containing employees who worked more than 8 hours.\n8. Display the department having the highest number of Present employees.\n9. Display the employee who worked the maximum number of hours.",
+
+  "inputFormat": "The file 'attendance.txt' contains one record per line in the format:\nEmployeeID|EmployeeName|Department|Status|WorkingHours",
+
+  "outputFormat": "Display:\n- Total Records\n- Present Count\n- Absent Count\n- Leave Count\n- Overtime Employees\n- Total Overtime Hours\n- Department with Highest Attendance\n- Employee with Maximum Working Hours\n\nGenerate:\n1. absent.txt\n2. overtime.txt",
+
+  "constraints": [
+    "The file contains between 100 and 5000 records.",
+    "Employee IDs are unique.",
+    "Working Hours range from 0 to 16.",
+    "Status is P, A or L."
+  ],
+
+  "sampleInput": [
+    "E101|Aman|Sales|P|9",
+    "E102|Riya|HR|A|0",
+    "E103|Karan|Sales|P|11",
+    "E104|Neha|IT|L|0",
+    "Search Employee ID : E103"
+  ],
+
+  "sampleOutput": {
+    "Total Records": 4,
+    "Present": 2,
+    "Absent": 1,
+    "Leave": 1,
+    "Overtime Employees": [
+      "Aman",
+      "Karan"
+    ],
+    "Total Overtime Hours": 4,
+    "Department with Highest Attendance": "Sales",
+    "Maximum Working Hours": {
+      "Employee": "Karan",
+      "Hours": 11
+    },
+    "Generated Files": [
+      "absent.txt",
+      "overtime.txt"
+    ]
+  },
+
+  "starterCode": "def attendanceAnalyzer():\n    fileName='attendance.txt'\n\n    # Write your solution here\n\n\nattendanceAnalyzer()",
+
+  "visibleTestCases": [
+    {
+      "input": "Mixed Present, Absent and Leave records",
+      "expected": "Attendance summary generated correctly"
+    },
+    {
+      "input": "All employees present",
+      "expected": "No absent.txt records and correct overtime calculation"
+    },
+    {
+      "input": "Search using an invalid Employee ID",
+      "expected": "Employee Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single employee",
+    "5000 employee records",
+    "No overtime employees",
+    "All employees absent",
+    "Search first employee",
+    "Search last employee"
+  ],
+
+  "explanation": "Read the attendance file line by line, split each record using '|', calculate attendance statistics, identify overtime employees, generate separate report files, perform Employee ID search and display the required summary.",
+
+  "xp": 325,
+
+  "coins": 225
+}
+{
+  "id": "H005",
+  "title": "Bank Transaction Log Auditor",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "ABC Bank stores all daily customer transactions in a text file named 'transactions.txt'. Every line represents one transaction in the following format:\n\nTransactionID|AccountNumber|CustomerName|TransactionType|Amount|Status\n\nTransactionType is either Deposit or Withdrawal.\nStatus is either SUCCESS or FAILED.\n\nAt the end of every day, the Audit Department verifies transaction records, identifies suspicious activities, prepares summary reports and stores failed transactions separately for investigation.",
+
+  "statement": "Write a Python program that reads 'transactions.txt' and performs the following tasks:\n\n1. Count the total number of transactions.\n2. Display the total number of successful and failed transactions.\n3. Calculate the total deposited amount.\n4. Calculate the total withdrawn amount.\n5. Calculate the net cash flow (Deposits - Withdrawals).\n6. Display the customer who performed the highest successful transaction.\n7. Search transaction details using Transaction ID entered by the user.\n8. Save all FAILED transactions into a new text file named 'failed_transactions.txt'.\n9. Display all customers who performed transactions greater than ₹50,000.\n10. Display the Account Number having the highest number of successful transactions.",
+
+  "inputFormat": "The file 'transactions.txt' contains one record per line in the following format:\nTransactionID|AccountNumber|CustomerName|TransactionType|Amount|Status",
+
+  "outputFormat": "Display:\n- Total Transactions\n- Successful Transactions\n- Failed Transactions\n- Total Deposit Amount\n- Total Withdrawal Amount\n- Net Cash Flow\n- Highest Successful Transaction\n- Search Result\n- High Value Customers\n- Most Active Account\n\nGenerate:\nfailed_transactions.txt",
+
+  "constraints": [
+    "The file contains between 100 and 5000 records.",
+    "Transaction IDs are unique.",
+    "TransactionType is Deposit or Withdrawal.",
+    "Status is SUCCESS or FAILED.",
+    "Amount is a positive integer."
+  ],
+
+  "sampleInput": [
+    "T101|ACC101|Aman|Deposit|25000|SUCCESS",
+    "T102|ACC102|Riya|Withdrawal|12000|SUCCESS",
+    "T103|ACC101|Aman|Withdrawal|60000|FAILED",
+    "T104|ACC103|Neha|Deposit|80000|SUCCESS",
+    "Search Transaction ID : T104"
+  ],
+
+  "sampleOutput": {
+    "Total Transactions": 4,
+    "Successful Transactions": 3,
+    "Failed Transactions": 1,
+    "Total Deposit Amount": 105000,
+    "Total Withdrawal Amount": 12000,
+    "Net Cash Flow": 93000,
+    "Highest Successful Transaction": {
+      "Customer": "Neha",
+      "Amount": 80000
+    },
+    "Search Result": "T104 | ACC103 | Neha | Deposit | 80000 | SUCCESS",
+    "High Value Customers": [
+      "Aman",
+      "Neha"
+    ],
+    "Most Active Account": "ACC101",
+    "Generated File": "failed_transactions.txt"
+  },
+
+  "starterCode": "def auditTransactions():\n    fileName='transactions.txt'\n\n    # Write your solution here\n\n\nauditTransactions()",
+
+  "visibleTestCases": [
+    {
+      "input": "Mixed successful and failed transactions",
+      "expected": "Audit report generated correctly"
+    },
+    {
+      "input": "All transactions successful",
+      "expected": "failed_transactions.txt should be empty"
+    },
+    {
+      "input": "Invalid Transaction ID",
+      "expected": "Transaction Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty transaction file",
+    "Single transaction record",
+    "5000 transaction records",
+    "All failed transactions",
+    "No deposits",
+    "Search first transaction",
+    "Search last transaction"
+  ],
+
+  "explanation": "Read every record from the text file, split the fields using '|', calculate transaction statistics, search records using Transaction ID, identify high-value transactions, determine the most active account, generate audit reports, and write all failed transactions into a separate text file.",
+
+  "xp": 350,
+
+  "coins": 250
+}
+{
+  "id": "H006",
+  "title": "Online Examination Result Verification System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A competitive examination portal stores student responses in a text file named 'exam_results.txt'. During data migration, some records were accidentally duplicated and a few records contain invalid marks. Before publishing the results, the Examination Committee wants an automated verification system that detects duplicate entries, validates marks, generates a merit list and prepares an error report.",
+
+  "statement": "Write a Python program that reads 'exam_results.txt' and performs the following tasks:\n\n1. Count the total number of records.\n2. Identify duplicate Roll Numbers and display them.\n3. Validate that Marks are between 0 and 500. Invalid records should not be included in result processing.\n4. Save all invalid records into 'invalid_records.txt'.\n5. Remove duplicate records by keeping only the first occurrence.\n6. Generate a merit list sorted in descending order of Marks.\n7. Save the merit list into 'merit_list.txt'.\n8. Display the Top 10 rank holders.\n9. Display the overall average marks.\n10. Search a student using Roll Number entered by the user and display Rank, Marks and Result (PASS if Marks ≥ 200 otherwise FAIL).",
+
+  "inputFormat": "The file 'exam_results.txt' contains one record per line in the following format:\nRollNo|StudentName|Class|Marks",
+
+  "outputFormat": "Display:\n- Total Records\n- Duplicate Roll Numbers\n- Invalid Records Count\n- Average Marks\n- Top 10 Rank Holders\n- Search Result\n\nGenerate:\n1. invalid_records.txt\n2. merit_list.txt",
+
+  "constraints": [
+    "The file contains between 100 and 10000 records.",
+    "Roll Numbers are expected to be unique.",
+    "Marks should be between 0 and 500.",
+    "Duplicate records should not appear in the final merit list.",
+    "Sorting must be in descending order of Marks."
+  ],
+
+  "sampleInput": [
+    "101|Aman|12A|425",
+    "102|Riya|12A|389",
+    "101|Aman|12A|425",
+    "103|Neha|12B|520",
+    "104|Karan|12A|198",
+    "Search Roll Number : 102"
+  ],
+
+  "sampleOutput": {
+    "Total Records": 5,
+    "Duplicate Roll Numbers": [
+      "101"
+    ],
+    "Invalid Records": 1,
+    "Average Marks": 337.33,
+    "Top Rank Holder": "Aman",
+    "Search Result": {
+      "Roll Number": "102",
+      "Rank": 2,
+      "Marks": 389,
+      "Result": "PASS"
+    },
+    "Generated Files": [
+      "invalid_records.txt",
+      "merit_list.txt"
+    ]
+  },
+
+  "starterCode": "def verifyResults():\n    fileName='exam_results.txt'\n\n    # Write your solution here\n\n\nverifyResults()",
+
+  "visibleTestCases": [
+    {
+      "input": "Records containing duplicates and invalid marks",
+      "expected": "Duplicates detected and invalid records stored separately"
+    },
+    {
+      "input": "All valid records",
+      "expected": "Merit list generated correctly"
+    },
+    {
+      "input": "Search using an unavailable Roll Number",
+      "expected": "Student Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single record",
+    "10000 records",
+    "All duplicate records",
+    "All invalid marks",
+    "Marks exactly 0 and 500",
+    "Top 10 ranking with tied marks"
+  ],
+
+  "explanation": "Read every record from the text file, validate marks, detect duplicate Roll Numbers, remove duplicate entries, calculate average marks, sort records in descending order to prepare the merit list, write invalid and ranked records into separate text files, and perform Roll Number search.",
+
+  "xp": 400,
+
+  "coins": 300
+}
+{
+  "id": "H007",
+  "title": "Hospital Medicine Inventory Audit System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A district hospital maintains its medicine inventory in a text file named 'medicine_stock.txt'. Each line represents one medicine batch in the following format:\n\nBatchID|MedicineName|Category|Quantity|ExpiryYear\n\nDuring the annual audit, the pharmacy department must identify duplicate batch IDs, expired medicines, low-stock medicines and prepare separate reports before placing new purchase orders.",
+
+  "statement": "Write a Python program that reads 'medicine_stock.txt' and performs the following tasks:\n\n1. Count the total number of medicine batches.\n2. Detect duplicate Batch IDs and display them.\n3. Display all medicines that have already expired (ExpiryYear less than the current year).\n4. Display medicines having stock less than 20 units.\n5. Calculate the total available quantity category-wise.\n6. Search for a medicine using Batch ID entered by the user.\n7. Generate a file named 'expired_medicines.txt' containing all expired medicine records.\n8. Generate another file named 'reorder_list.txt' containing medicines whose stock is below 20 units.\n9. Display the medicine category having the highest total stock.\n10. Display the Top 5 medicines with the highest available quantity.",
+
+  "inputFormat": "The file 'medicine_stock.txt' contains one record per line in the following format:\nBatchID|MedicineName|Category|Quantity|ExpiryYear",
+
+  "outputFormat": "Display:\n- Total Medicine Batches\n- Duplicate Batch IDs\n- Expired Medicines\n- Low Stock Medicines\n- Category with Highest Stock\n- Top 5 Medicines by Quantity\n- Search Result\n\nGenerate:\n1. expired_medicines.txt\n2. reorder_list.txt",
+
+  "constraints": [
+    "The file contains between 100 and 10000 records.",
+    "Batch IDs are expected to be unique.",
+    "Quantity is a non-negative integer.",
+    "ExpiryYear is a valid four-digit year.",
+    "Use the current year while checking expiry."
+  ],
+
+  "sampleInput": [
+    "B101|Paracetamol|Tablet|150|2027",
+    "B102|Amoxicillin|Capsule|18|2026",
+    "B103|Insulin|Injection|10|2024",
+    "B101|Paracetamol|Tablet|150|2027",
+    "Search Batch ID : B102"
+  ],
+
+  "sampleOutput": {
+    "Total Medicine Batches": 4,
+    "Duplicate Batch IDs": [
+      "B101"
+    ],
+    "Expired Medicines": [
+      "Insulin"
+    ],
+    "Low Stock Medicines": [
+      "Amoxicillin",
+      "Insulin"
+    ],
+    "Category with Highest Stock": "Tablet",
+    "Top Medicine": "Paracetamol",
+    "Search Result": "B102 | Amoxicillin | Capsule | 18 | 2026",
+    "Generated Files": [
+      "expired_medicines.txt",
+      "reorder_list.txt"
+    ]
+  },
+
+  "starterCode": "def medicineInventoryAudit():\n    fileName='medicine_stock.txt'\n\n    # Write your solution here\n\n\nmedicineInventoryAudit()",
+
+  "visibleTestCases": [
+    {
+      "input": "Records containing duplicate Batch IDs and expired medicines",
+      "expected": "Duplicates, expired medicines and reorder list generated correctly"
+    },
+    {
+      "input": "All medicines valid with sufficient stock",
+      "expected": "No records written to either output file"
+    },
+    {
+      "input": "Search using an unavailable Batch ID",
+      "expected": "Medicine Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single medicine record",
+    "10000 medicine records",
+    "All medicines expired",
+    "All medicines below reorder level",
+    "Search first record",
+    "Search last record"
+  ],
+
+  "explanation": "Read the medicine inventory file line by line, split records using '|', detect duplicate Batch IDs, identify expired and low-stock medicines, calculate category-wise stock totals, generate separate report files, determine the highest stocked category and Top 5 medicines, and perform Batch ID search.",
+
+  "xp": 450,
+
+  "coins": 325
+}
+
+{
+  "id": "H008",
+  "title": "City Parking Violation Audit System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A Smart City parking authority records every vehicle entry in a text file named 'parking_log.txt'. Each record follows the format:\n\nVehicleNumber|OwnerName|VehicleType|ParkingHours|FinePaid\n\nDue to manual data entry, duplicate vehicle numbers, invalid parking hours and incorrect fine entries may exist. The authority wants an automated audit system to verify the records, identify violations and generate compliance reports.",
+
+  "statement": "Write a Python program that reads 'parking_log.txt' and performs the following tasks:\n\n1. Count the total number of parking records.\n2. Detect duplicate Vehicle Numbers and display them.\n3. Identify invalid records where ParkingHours is less than 0 or greater than 24.\n4. Save all invalid records into 'invalid_parking.txt'.\n5. Vehicles parked for more than 8 hours should pay a fine of ₹100 for every extra hour. Display vehicles whose FinePaid is less than the expected fine.\n6. Save all violation records into 'parking_violations.txt'.\n7. Display the Vehicle Type having the highest number of violations.\n8. Display the Top 5 vehicles with the longest parking duration.\n9. Search for a Vehicle Number entered by the user and display complete details along with the expected fine.\n10. Display the total expected fine, total collected fine and total pending fine.",
+
+  "inputFormat": "The input file 'parking_log.txt' contains one record per line in the following format:\nVehicleNumber|OwnerName|VehicleType|ParkingHours|FinePaid",
+
+  "outputFormat": "Display:\n- Total Records\n- Duplicate Vehicles\n- Invalid Records\n- Violation Records\n- Vehicle Type with Maximum Violations\n- Top 5 Longest Parking Durations\n- Search Result\n- Total Expected Fine\n- Total Collected Fine\n- Total Pending Fine\n\nGenerate:\n1. invalid_parking.txt\n2. parking_violations.txt",
+
+  "constraints": [
+    "The file contains between 100 and 10000 records.",
+    "Vehicle Numbers are expected to be unique.",
+    "Parking Hours must be between 0 and 24.",
+    "Fine Paid cannot be negative.",
+    "Do not include invalid records while calculating fines."
+  ],
+
+  "sampleInput": [
+    "CG04AB1234|Aman|Car|10|100",
+    "CG04XY5678|Riya|Bike|5|0",
+    "CG04AB1234|Aman|Car|10|100",
+    "CG04PQ9876|Neha|Truck|26|0",
+    "Search Vehicle Number : CG04XY5678"
+  ],
+
+  "sampleOutput": {
+    "Total Records": 4,
+    "Duplicate Vehicles": [
+      "CG04AB1234"
+    ],
+    "Invalid Records": 1,
+    "Violation Records": [
+      "CG04AB1234"
+    ],
+    "Vehicle Type with Maximum Violations": "Car",
+    "Top Parking Duration": "CG04AB1234",
+    "Search Result": {
+      "Vehicle Number": "CG04XY5678",
+      "Expected Fine": 0
+    },
+    "Total Expected Fine": 200,
+    "Total Collected Fine": 100,
+    "Pending Fine": 100,
+    "Generated Files": [
+      "invalid_parking.txt",
+      "parking_violations.txt"
+    ]
+  },
+
+  "starterCode": "def parkingAudit():\n    fileName='parking_log.txt'\n\n    # Write your solution here\n\n\nparkingAudit()",
+
+  "visibleTestCases": [
+    {
+      "input": "Records containing duplicate vehicles and parking violations",
+      "expected": "Duplicates detected and violation reports generated"
+    },
+    {
+      "input": "All parking records valid",
+      "expected": "No invalid or violation records generated"
+    },
+    {
+      "input": "Search using an unavailable Vehicle Number",
+      "expected": "Vehicle Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single record",
+    "10000 records",
+    "All vehicles violate parking rules",
+    "All records invalid",
+    "Search first vehicle",
+    "Search last vehicle"
+  ],
+
+  "explanation": "Read every record from the text file, validate parking hours, detect duplicate vehicle numbers, calculate expected fines, compare them with the paid amount, generate violation reports, prepare summary statistics, determine the most violating vehicle type and perform Vehicle Number search.",
+
+  "xp": 500,
+
+  "coins": 350
+}
+{
+  "id": "H009",
+  "title": "Cyber Security Login Audit System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A software company stores employee login activity in a text file named 'login_log.txt'. Every successful and failed login attempt is recorded for security auditing.\n\nEach record follows the format:\n\nEmployeeID|EmployeeName|Department|LoginTime|Status|IPAddress\n\nStatus is either SUCCESS or FAILED.\n\nThe Cyber Security Team wants to identify suspicious login behaviour, detect brute-force attacks, and generate security reports.",
+
+  "statement": "Write a Python program that reads 'login_log.txt' and performs the following tasks:\n\n1. Count the total number of login attempts.\n2. Display the number of successful and failed logins.\n3. Display all employees who have three or more FAILED login attempts.\n4. Display all IP addresses from which more than five login attempts were made.\n5. Search an employee using Employee ID entered by the user and display all login attempts made by that employee.\n6. Generate a new text file named 'failed_logins.txt' containing only FAILED login records.\n7. Generate another file named 'suspicious_accounts.txt' containing employees having three or more FAILED login attempts.\n8. Display the department with the highest number of FAILED login attempts.\n9. Display the Top 5 most active employees based on total login attempts.\n10. Display the employee having the longest successful login history (maximum SUCCESS records).",
+
+  "inputFormat": "The file 'login_log.txt' contains one record per line in the following format:\nEmployeeID|EmployeeName|Department|LoginTime|Status|IPAddress",
+
+  "outputFormat": "Display:\n- Total Login Attempts\n- Successful Logins\n- Failed Logins\n- Suspicious Employees\n- Suspicious IP Addresses\n- Department with Maximum Failed Attempts\n- Top 5 Active Employees\n- Employee with Longest Successful Login History\n- Search Result\n\nGenerate:\n1. failed_logins.txt\n2. suspicious_accounts.txt",
+
+  "constraints": [
+    "The file contains between 100 and 10000 records.",
+    "Status is either SUCCESS or FAILED.",
+    "One employee may have multiple login records.",
+    "One IP address may be shared across multiple login attempts."
+  ],
+
+  "sampleInput": [
+    "E101|Aman|IT|09:15|SUCCESS|192.168.1.10",
+    "E102|Riya|HR|09:18|FAILED|192.168.1.20",
+    "E102|Riya|HR|09:21|FAILED|192.168.1.20",
+    "E102|Riya|HR|09:25|FAILED|192.168.1.20",
+    "Search Employee ID : E102"
+  ],
+
+  "sampleOutput": {
+    "Total Login Attempts": 4,
+    "Successful Logins": 1,
+    "Failed Logins": 3,
+    "Suspicious Employees": [
+      "Riya"
+    ],
+    "Suspicious IP Addresses": [],
+    "Department with Maximum Failed Attempts": "HR",
+    "Top Active Employee": "Riya",
+    "Longest Successful Login History": "Aman",
+    "Generated Files": [
+      "failed_logins.txt",
+      "suspicious_accounts.txt"
+    ]
+  },
+
+  "starterCode": "def loginAudit():\n    fileName='login_log.txt'\n\n    # Write your solution here\n\n\nloginAudit()",
+
+  "visibleTestCases": [
+    {
+      "input": "Employee with three failed logins",
+      "expected": "Employee appears in suspicious_accounts.txt"
+    },
+    {
+      "input": "Multiple login attempts from the same IP",
+      "expected": "IP appears in suspicious list if attempts exceed five"
+    },
+    {
+      "input": "Search using an unavailable Employee ID",
+      "expected": "Employee Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty log file",
+    "Single login record",
+    "10000 login records",
+    "All login attempts successful",
+    "All login attempts failed",
+    "Search first employee",
+    "Search last employee"
+  ],
+
+  "explanation": "Read the login log file line by line, classify successful and failed logins, count failed attempts for each employee, calculate login frequency for each IP address, identify suspicious accounts, generate separate report files, determine department-wise statistics, rank employees by login activity and perform Employee ID search.",
+
+  "xp": 550,
+
+  "coins": 400
+}
+{
+  "id": "H010",
+  "title": "National Disaster Relief Distribution Audit",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "During a flood relief operation, every relief distribution is recorded in a text file named 'relief_distribution.txt'. Each record follows the format:\n\nReliefID|Village|FamilyID|ReliefType|Quantity|VolunteerID\n\nDue to network failures and manual data entry, duplicate distributions, missing records and unusual quantities may exist. Before submitting the final report to the Disaster Management Authority, every record must be verified.",
+
+  "statement": "Write a Python program that reads 'relief_distribution.txt' and performs the following tasks:\n\n1. Count the total number of distribution records.\n2. Detect duplicate Relief IDs and display them.\n3. Detect families who received the same Relief Type more than once and display their Family IDs.\n4. Identify suspicious records where Quantity is less than or equal to 0 or greater than 100.\n5. Save all suspicious records into a file named 'suspicious_records.txt'.\n6. Calculate the total quantity distributed for each Relief Type.\n7. Display the Relief Type with the highest total quantity distributed.\n8. Display the Top 5 volunteers who distributed the maximum total quantity.\n9. Search for a Family ID entered by the user and display every relief item received by that family.\n10. Generate a final audit report named 'audit_report.txt' containing:\n   - Total Records\n   - Duplicate Relief IDs\n   - Duplicate Family Distributions\n   - Suspicious Records\n   - Total Quantity by Relief Type\n   - Top Volunteer\n   - Audit Status (PASS if no suspicious records exist, otherwise FAIL)",
+
+  "inputFormat": "The input file 'relief_distribution.txt' contains one record per line in the following format:\nReliefID|Village|FamilyID|ReliefType|Quantity|VolunteerID",
+
+  "outputFormat": "Display:\n- Total Records\n- Duplicate Relief IDs\n- Duplicate Family Distributions\n- Suspicious Records\n- Relief Type with Highest Distribution\n- Top 5 Volunteers\n- Search Result\n\nGenerate:\n1. suspicious_records.txt\n2. audit_report.txt",
+
+  "constraints": [
+    "The file contains between 100 and 10000 records.",
+    "Relief IDs are expected to be unique.",
+    "Quantity should be between 1 and 100.",
+    "One family can receive multiple relief types but should not receive the same relief type more than once.",
+    "Do not include suspicious records while calculating final distribution statistics."
+  ],
+
+  "sampleInput": [
+    "R101|Rampur|F201|Food Kit|5|V01",
+    "R102|Rampur|F202|Blanket|2|V02",
+    "R103|Rampur|F201|Food Kit|5|V03",
+    "R104|Lakshmipur|F205|Medicine Kit|150|V01",
+    "Search Family ID : F201"
+  ],
+
+  "sampleOutput": {
+    "Total Records": 4,
+    "Duplicate Relief IDs": [],
+    "Duplicate Family Distributions": [
+      "F201"
+    ],
+    "Suspicious Records": 1,
+    "Highest Relief Type": "Food Kit",
+    "Top Volunteer": "V01",
+    "Search Result": [
+      "Food Kit - Quantity: 5",
+      "Food Kit - Quantity: 5"
+    ],
+    "Generated Files": [
+      "suspicious_records.txt",
+      "audit_report.txt"
+    ]
+  },
+
+  "starterCode": "def auditReliefDistribution():\n    fileName='relief_distribution.txt'\n\n    # Write your solution here\n\n\nauditReliefDistribution()",
+
+  "visibleTestCases": [
+    {
+      "input": "Duplicate family distributions and one suspicious quantity",
+      "expected": "Duplicate families and suspicious records detected correctly"
+    },
+    {
+      "input": "All valid records",
+      "expected": "Audit Status = PASS"
+    },
+    {
+      "input": "Search using an unavailable Family ID",
+      "expected": "Family Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty file",
+    "Single record",
+    "10000 records",
+    "All quantities invalid",
+    "Duplicate Relief IDs",
+    "Multiple duplicate family distributions",
+    "Search first family",
+    "Search last family"
+  ],
+
+  "explanation": "Read the text file line by line, validate quantities, detect duplicate Relief IDs and duplicate family distributions, calculate relief totals, identify top volunteers, search by Family ID, generate separate report files and prepare a final audit report summarising the entire distribution process.",
+
+  "xp": 600,
+
+  "coins": 450
+}
+{
+  "id": "H011",
+  "title": "Inter-School Sports Registration Verification System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A district-level sports competition receives registrations from multiple schools. Student registration details are stored in 'registrations.txt', while event participation details are stored in another file named 'events.txt'. Before generating the final participation list, the Sports Committee must verify that every participating student has a valid registration and identify duplicate or invalid entries.",
+
+  "statement": "Write a Python program that reads both 'registrations.txt' and 'events.txt' and performs the following tasks:\n\n1. Count the total number of registered students.\n2. Count the total number of event participation records.\n3. Identify students participating in events without a valid registration.\n4. Identify registered students who have not participated in any event.\n5. Detect duplicate Event IDs for the same student.\n6. Generate a file named 'invalid_participants.txt' containing students who participated without registration.\n7. Generate another file named 'inactive_students.txt' containing registered students who did not participate in any event.\n8. Display the event having the highest number of participants.\n9. Display the school having the highest participation.\n10. Search a Student ID entered by the user and display:\n    - Registration Details\n    - Events Participated\n    - Participation Status (ACTIVE / INACTIVE)",
+
+  "inputFormat": "registrations.txt\nStudentID|StudentName|School|Class\n\n\nevents.txt\nStudentID|EventID|EventName",
+
+  "outputFormat": "Display:\n- Total Registered Students\n- Total Event Records\n- Invalid Participants\n- Inactive Students\n- Most Popular Event\n- School with Highest Participation\n- Search Result\n\nGenerate:\n1. invalid_participants.txt\n2. inactive_students.txt",
+
+  "constraints": [
+    "Each file contains between 100 and 5000 records.",
+    "Student IDs are unique in registrations.txt.",
+    "A student may participate in multiple events.",
+    "Ignore duplicate participation records while calculating totals."
+  ],
+
+  "sampleInput": {
+    "registrations.txt": [
+      "S101|Aman|KV Dongargarh|12A",
+      "S102|Riya|KV Rajnandgaon|12B",
+      "S103|Neha|KV Bhilai|11A"
+    ],
+    "events.txt": [
+      "S101|E01|100m Race",
+      "S101|E02|Long Jump",
+      "S104|E03|Shot Put"
+    ]
+  },
+
+  "sampleOutput": {
+    "Total Registered Students": 3,
+    "Total Event Records": 3,
+    "Invalid Participants": [
+      "S104"
+    ],
+    "Inactive Students": [
+      "S102",
+      "S103"
+    ],
+    "Most Popular Event": "100m Race",
+    "School with Highest Participation": "KV Dongargarh",
+    "Search Result": {
+      "StudentID": "S101",
+      "Status": "ACTIVE",
+      "Events": [
+        "100m Race",
+        "Long Jump"
+      ]
+    },
+    "Generated Files": [
+      "invalid_participants.txt",
+      "inactive_students.txt"
+    ]
+  },
+
+  "starterCode": "def verifySportsRegistration():\n    registrationFile='registrations.txt'\n    eventFile='events.txt'\n\n    # Write your solution here\n\n\nverifySportsRegistration()",
+
+  "visibleTestCases": [
+    {
+      "input": "One invalid participant and two inactive students",
+      "expected": "Reports generated correctly"
+    },
+    {
+      "input": "Every participant is registered",
+      "expected": "invalid_participants.txt remains empty"
+    },
+    {
+      "input": "Search using an unavailable Student ID",
+      "expected": "Student Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty registration file",
+    "Empty event file",
+    "5000 records in each file",
+    "All students inactive",
+    "All event records invalid",
+    "Duplicate event registrations",
+    "Search first student",
+    "Search last student"
+  ],
+
+  "explanation": "Read both text files, compare Student IDs to verify registrations, identify invalid and inactive students, calculate participation statistics, generate separate report files, determine the most popular event and school, and search for a student's complete participation details.",
+
+  "xp": 650,
+
+  "coins": 500
+}
+
+{
+  "id": "H012",
+  "title": "Scholarship Payment Reconciliation System",
+  "topic": "Text File Handling",
+  "difficulty": "Hard",
+
+  "caseStudy": "A state education department maintains two text files every month. The file 'approved_students.txt' contains students approved for scholarship, while 'payment_log.txt' contains payment transactions made by the bank. Before releasing the final report, the department must reconcile both files to identify missing, duplicate and incorrect payments.",
+
+  "statement": "Write a Python program that reads both 'approved_students.txt' and 'payment_log.txt' and performs the following tasks:\n\n1. Count the total number of approved students.\n2. Count the total number of payment records.\n3. Identify approved students who have not received any payment.\n4. Identify payments made to students who are not present in the approved list.\n5. Detect duplicate payment transactions for the same Student ID.\n6. Verify that the Amount Paid matches the Scholarship Amount approved for each student. Display all mismatched records.\n7. Generate a file named 'pending_payments.txt' containing approved students who have not received payment.\n8. Generate another file named 'payment_exceptions.txt' containing invalid, duplicate and mismatched payment records.\n9. Display the school having the highest total scholarship amount successfully paid.\n10. Search for a Student ID entered by the user and display:\n    - Approval Details\n    - Payment Details\n    - Payment Status (PAID / PENDING / INVALID)",
+
+  "inputFormat": "approved_students.txt\nStudentID|StudentName|School|ScholarshipAmount\n\npayment_log.txt\nTransactionID|StudentID|AmountPaid|PaymentDate",
+
+  "outputFormat": "Display:\n- Total Approved Students\n- Total Payment Records\n- Pending Payments\n- Invalid Payments\n- Duplicate Payments\n- Amount Mismatches\n- School with Highest Scholarship Distribution\n- Search Result\n\nGenerate:\n1. pending_payments.txt\n2. payment_exceptions.txt",
+
+  "constraints": [
+    "Each file contains between 100 and 5000 records.",
+    "Student IDs are unique in approved_students.txt.",
+    "Transaction IDs are unique.",
+    "A student should receive only one scholarship payment.",
+    "Ignore duplicate or invalid payments while calculating school totals."
+  ],
+
+  "sampleInput": {
+    "approved_students.txt": [
+      "S101|Aman|KV Dongargarh|12000",
+      "S102|Riya|KV Rajnandgaon|15000",
+      "S103|Neha|KV Bhilai|10000"
+    ],
+    "payment_log.txt": [
+      "TX101|S101|12000|10-07-2026",
+      "TX102|S104|15000|10-07-2026",
+      "TX103|S102|14000|11-07-2026",
+      "TX104|S102|15000|12-07-2026"
+    ]
+  },
+
+  "sampleOutput": {
+    "Total Approved Students": 3,
+    "Total Payment Records": 4,
+    "Pending Payments": [
+      "S103"
+    ],
+    "Invalid Payments": [
+      "S104"
+    ],
+    "Duplicate Payments": [
+      "S102"
+    ],
+    "Amount Mismatches": [
+      "S102"
+    ],
+    "Highest Scholarship School": "KV Dongargarh",
+    "SearchResult": {
+      "StudentID": "S102",
+      "Status": "PAID",
+      "Remarks": "Duplicate Payment Found"
+    },
+    "GeneratedFiles": [
+      "pending_payments.txt",
+      "payment_exceptions.txt"
+    ]
+  },
+
+  "starterCode": "def reconcileScholarshipPayments():\n    approvedFile='approved_students.txt'\n    paymentFile='payment_log.txt'\n\n    # Write your solution here\n\n\nreconcileScholarshipPayments()",
+
+  "visibleTestCases": [
+    {
+      "input": "One pending payment and one invalid payment",
+      "expected": "Exception reports generated correctly"
+    },
+    {
+      "input": "All payments valid",
+      "expected": "No pending or exception records"
+    },
+    {
+      "input": "Search unavailable Student ID",
+      "expected": "Student Not Found"
+    }
+  ],
+
+  "hiddenTestCases": [
+    "Empty approved file",
+    "Empty payment file",
+    "5000 records in each file",
+    "All payments duplicated",
+    "All payments mismatched",
+    "No payments made",
+    "Search first student",
+    "Search last student"
+  ],
+
+  "explanation": "Read both text files, compare Student IDs, verify payment amounts, detect duplicate and invalid transactions, identify pending payments, generate exception reports, calculate school-wise scholarship distribution and search for complete payment details of a student.",
+
+  "xp": 700,
+
+  "coins": 550
+}
