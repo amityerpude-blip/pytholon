@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "M001",
+    "title": "Student Report Card Analyzer",
+    "topic": "Loops + If",
+    "difficulty": "Medium",
+    "caseStudy": "Student Report Card Analyzer: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M002",
+    "title": "Bank Account Transaction Summary",
+    "topic": "Loops",
+    "difficulty": "Medium",
+    "caseStudy": "Bank Account Transaction Summary: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M003",
+    "title": "Library Book Return Manager",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "caseStudy": "Library Book Return Manager: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M004",
+    "title": "Online Shopping Discount Engine",
+    "topic": "If Else",
+    "difficulty": "Medium",
+    "caseStudy": "Online Shopping Discount Engine: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M005",
+    "title": "Electricity Bill Generator",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "caseStudy": "Electricity Bill Generator: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M006",
+    "title": "Hospital BMI Screening",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "caseStudy": "Hospital BMI Screening: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M007",
+    "title": "Employee Attendance Processor",
+    "topic": "Loops",
+    "difficulty": "Medium",
+    "caseStudy": "Employee Attendance Processor: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M008",
+    "title": "School House Points Calculator",
+    "topic": "Loops + If",
+    "difficulty": "Medium",
+    "caseStudy": "School House Points Calculator: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M009",
+    "title": "Restaurant Billing System",
+    "topic": "Functions",
+    "difficulty": "Medium",
+    "caseStudy": "Restaurant Billing System: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M010",
+    "title": "Inventory Stock Monitor",
+    "topic": "Loops",
+    "difficulty": "Medium",
+    "caseStudy": "Inventory Stock Monitor: Solve this real-world case by combining multiple Python concepts.",
+    "statement": "Read the inputs, process the scenario logically, and print the required output exactly as specified.",
+    "inputFormat": "Refer to the problem statement.",
+    "outputFormat": "Display only the required result.",
+    "constraints": "Combine two or more Python concepts to produce the solution.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps and combine the required Python concepts.",
+    "xp": 150,
+    "coins": 75
+  },
+
+  {
+    "id": "M011",
+    "title": "School Fee Collection Report",
+    "topic": "Lists + Loops",
+    "difficulty": "Medium",
+    "caseStudy": "School Fee Collection Report: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M012",
+    "title": "Bus Route Passenger Summary",
+    "topic": "Lists",
+    "difficulty": "Medium",
+    "caseStudy": "Bus Route Passenger Summary: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M013",
+    "title": "Examination Rank Generator",
+    "topic": "Functions + Lists",
+    "difficulty": "Medium",
+    "caseStudy": "Examination Rank Generator: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M014",
+    "title": "Weather Data Analyzer",
+    "topic": "Loops + If",
+    "difficulty": "Medium",
+    "caseStudy": "Weather Data Analyzer: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M015",
+    "title": "Hospital Patient Queue",
+    "topic": "Lists",
+    "difficulty": "Medium",
+    "caseStudy": "Hospital Patient Queue: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M016",
+    "title": "Warehouse Inventory Manager",
+    "topic": "Functions + Loops",
+    "difficulty": "Medium",
+    "caseStudy": "Warehouse Inventory Manager: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M017",
+    "title": "Movie Ticket Booking",
+    "topic": "If + Functions",
+    "difficulty": "Medium",
+    "caseStudy": "Movie Ticket Booking: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M018",
+    "title": "Water Consumption Monitor",
+    "topic": "Loops",
+    "difficulty": "Medium",
+    "caseStudy": "Water Consumption Monitor: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M019",
+    "title": "Monthly Salary Processor",
+    "topic": "Functions + If",
+    "difficulty": "Medium",
+    "caseStudy": "Monthly Salary Processor: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  },
+  {
+    "id": "M020",
+    "title": "School Library Inventory",
+    "topic": "Lists + Functions",
+    "difficulty": "Medium",
+    "caseStudy": "School Library Inventory: Analyze the given real-world scenario by combining multiple Python concepts.",
+    "statement": "Read the given inputs, process the data according to the case study, and print only the required output.",
+    "inputFormat": "As specified in the problem statement.",
+    "outputFormat": "Print the expected result exactly.",
+    "constraints": "Use appropriate Python constructs such as loops, functions, conditions, or lists.",
+    "sampleInput": "Sample Input",
+    "sampleOutput": "Sample Output",
+    "starterCode": "def solve():\n    # Write your solution here\n    pass\n\nsolve()",
+    "visibleTestCases": [
+      {
+        "input": "Case 1",
+        "output": "Expected 1"
+      },
+      {
+        "input": "Case 2",
+        "output": "Expected 2"
+      },
+      {
+        "input": "Case 3",
+        "output": "Expected 3"
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "Hidden 1",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 2",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 3",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 4",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 5",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 6",
+        "output": "Expected"
+      },
+      {
+        "input": "Hidden 7",
+        "output": "Expected"
+      }
+    ],
+    "explanation": "Break the problem into smaller steps, apply the required Python concepts, and produce the expected output.",
+    "xp": 150,
+    "coins": 75
+  }
+]
