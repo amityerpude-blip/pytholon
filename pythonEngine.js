@@ -49,11 +49,13 @@ PythonEngine.initialize = async function(){
 
         this.pyodide = await loadPyodide({
 
-            stdout: this.captureOutput,
+    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/",
 
-            stderr: this.captureOutput
+    stdout: (text) => PythonEngine.captureOutput(text),
 
-        });
+    stderr: (text) => PythonEngine.captureOutput(text)
+
+});
 
         this.initialized = true;
 
@@ -69,16 +71,16 @@ PythonEngine.initialize = async function(){
 
     catch(error){
 
-        console.error(error);
+    console.error("Pyodide Error:", error);
 
-        alert(
+    updateElement(
+        "loadingStatus",
+        "Pyodide Failed"
+    );
 
-            "Unable to load Pyodide."
+    alert(error.message);
 
-        );
-
-    }
-
+}
 };
 
 
