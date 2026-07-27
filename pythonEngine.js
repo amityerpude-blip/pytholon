@@ -1213,3 +1213,148 @@ async function run(){
     return execution;
 
 }
+/* =====================================================
+   MODULE 5
+   FINAL API & UTILITIES
+===================================================== */
+
+
+/* =====================================================
+   GET CURRENT QUESTION
+===================================================== */
+
+function getQuestion(){
+
+    return currentQuestion;
+
+}
+
+
+/* =====================================================
+   ENGINE STATUS
+===================================================== */
+
+function isReady(){
+
+    return initialized;
+
+}
+
+
+/* =====================================================
+   CLEAR ENGINE
+===================================================== */
+
+function clear(){
+
+    clearOutput();
+
+    currentQuestion = null;
+
+    if(editor){
+
+        editor.setValue("");
+
+    }
+
+}
+
+
+/* =====================================================
+   RESET QUESTION
+===================================================== */
+
+function resetQuestion(){
+
+    if(!currentQuestion){
+
+        return;
+
+    }
+
+    editor.setValue(
+
+        currentQuestion.starterCode || ""
+
+    );
+
+    clearOutput();
+
+}
+
+
+/* =====================================================
+   GET EDITOR INSTANCE
+===================================================== */
+
+function getEditor(){
+
+    return editor;
+
+}
+
+
+/* =====================================================
+   GET PYODIDE INSTANCE
+===================================================== */
+
+function getPyodide(){
+
+    return pyodide;
+
+}
+
+
+/* =====================================================
+   VERSION
+===================================================== */
+
+function version(){
+
+    return{
+
+        engine:"PythonEngine",
+
+        version:"1.0",
+
+        pyodide:CONFIG.pyodideVersion
+
+    };
+
+}
+
+
+/* =====================================================
+   PUBLIC API
+===================================================== */
+
+return{
+
+    initialize,
+
+    run,
+
+    setQuestion,
+
+    getQuestion,
+
+    getCode,
+
+    setCode,
+
+    resetQuestion,
+
+    clear,
+
+    isReady,
+
+    getEditor,
+
+    getPyodide,
+
+    version
+
+};
+
+})();
+
