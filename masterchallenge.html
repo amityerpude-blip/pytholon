@@ -343,8 +343,18 @@ Time Taken :
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
 
-  <script src="pythonEngine.js"></script>
-  
+<script src="monaco/min/vs/loader.js"></script>
+
+<script>
+require.config({
+    paths:{
+        vs:"monaco/min/vs"
+    }
+});
+</script>
+
+<script src="pythonEngine.js"></script>
+
 <script src="app.js"></script>
 
 </body>
