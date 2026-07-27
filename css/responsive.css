@@ -1,123 +1,343 @@
 /* =====================================================
-PYTHON MASTER CHALLENGE
-responsive.css
-Version 2.2
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   responsive.css
+   Version 1.0
+===================================================== */
+
+
+
+/* =====================================================
+   TABLET (1024px)
 ===================================================== */
 
 @media (max-width:1024px){
 
-.header{
-flex-direction:column;
-gap:15px;
-text-align:center;
-}
+.layout{
 
-.playerSection{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.navigation{
-flex-direction:column;
-}
-
-.questionStatus{
-justify-content:center;
-}
-
-.actionButtons{
-flex-wrap:wrap;
-}
-
-#codeEditor{
-height:360px;
-}
+    grid-template-columns:220px 1fr 280px;
 
 }
+
+.header h1{
+
+    font-size:22px;
+
+}
+
+.player{
+
+    font-size:13px;
+
+    gap:10px;
+
+}
+
+#codingArea{
+
+    height:280px;
+
+}
+
+}
+
+
+
+/* =====================================================
+   SMALL TABLET (900px)
+===================================================== */
+
+@media (max-width:900px){
+
+.layout{
+
+    grid-template-columns:1fr;
+
+    height:auto;
+
+}
+
+.left-panel{
+
+    order:1;
+
+}
+
+.center-panel{
+
+    order:2;
+
+}
+
+.right-panel{
+
+    order:3;
+
+}
+
+#questionPalette{
+
+    grid-template-columns:repeat(5,1fr);
+
+}
+
+.player{
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+
+
+/* =====================================================
+   MOBILE (768px)
+===================================================== */
 
 @media (max-width:768px){
 
-body{
-padding:10px;
-}
+.header{
 
-.logo{
-font-size:1.4rem;
-text-align:center;
-}
+    flex-direction:column;
 
-.challengeBar{
-grid-template-columns:1fr;
-gap:12px;
-}
+    gap:12px;
 
-.questionMeta{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
+    text-align:center;
 
-.questionBtn{
-width:38px;
-height:38px;
-}
-
-#previousQuestion,
-#nextQuestion,
-#runButton,
-#submitButton,
-#resetButton{
-width:100%;
-}
-
-#codeEditor{
-height:300px;
-font-size:14px;
-}
-
-pre{
-font-size:13px;
-}
+    padding:15px;
 
 }
+
+.header h1{
+
+    font-size:22px;
+
+}
+
+.player{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:10px;
+
+}
+
+.left-panel,
+
+.center-panel,
+
+.right-panel{
+
+    width:100%;
+
+}
+
+#codingArea{
+
+    height:250px;
+
+    font-size:14px;
+
+}
+
+#programOutput{
+
+    min-height:150px;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:10px;
+
+}
+
+.navigation{
+
+    flex-direction:column;
+
+}
+
+#questionPalette{
+
+    grid-template-columns:repeat(5,1fr);
+
+}
+
+.paletteButton{
+
+    width:100%;
+
+    height:45px;
+
+}
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE (480px)
+===================================================== */
 
 @media (max-width:480px){
 
-.logo{
-font-size:1.2rem;
+.header h1{
+
+    font-size:18px;
+
 }
 
-.playerSection{
-flex-direction:column;
-gap:10px;
+.player{
+
+    font-size:12px;
+
 }
 
-.questionStatus{
-gap:5px;
+.layout{
+
+    padding:8px;
+
 }
 
-.questionBtn{
-width:34px;
-height:34px;
-font-size:13px;
+.center-panel{
+
+    padding:15px;
+
+}
+
+.left-panel{
+
+    padding:15px;
+
+}
+
+.right-panel{
+
+    padding:15px;
+
+}
+
+#codingArea{
+
+    height:220px;
+
+    font-size:13px;
+
+}
+
+#programOutput{
+
+    font-size:13px;
+
 }
 
 #questionTitle{
-font-size:1.2rem;
-}
 
-#problemStatement,
-.exampleBox,
-.constraintBox{
-padding:12px;
-}
-
-#codeEditor{
-height:260px;
-}
-
-footer{
-font-size:13px;
-}
+    font-size:20px;
 
 }
+
+#questionPalette{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.paletteButton{
+
+    height:42px;
+
+}
+
+.statCard{
+
+    padding:10px;
+
+}
+
+.rewardBox{
+
+    padding:10px;
+
+}
+
+#timer{
+
+    font-size:24px;
+
+}
+
+}
+
+
+
+/* =====================================================
+   EXTRA SMALL DEVICES (360px)
+===================================================== */
+
+@media (max-width:360px){
+
+.header{
+
+    padding:10px;
+
+}
+
+.header h1{
+
+    font-size:16px;
+
+}
+
+.player{
+
+    font-size:11px;
+
+}
+
+#codingArea{
+
+    height:200px;
+
+    font-size:12px;
+
+}
+
+#questionPalette{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.paletteButton{
+
+    height:40px;
+
+    font-size:13px;
+
+}
+
+button{
+
+    font-size:13px;
+
+    padding:10px;
+
+}
+
+}
+
