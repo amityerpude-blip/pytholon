@@ -17,7 +17,7 @@ const CONFIG = {
 
     QUESTION_FOLDER: "data/",
 
-    DEFAULT_LEVEL: "hard",
+    DEFAULT_LEVEL: "easy",
 
     QUESTIONS_PER_SESSION: 10,
 
