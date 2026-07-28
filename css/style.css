@@ -1,14 +1,74 @@
-/* =====================================================
+/* =========================================================
    CODING BATTLE ARENA
    MASTER CHALLENGE
-   style.css (Part 1)
-   ===================================================== */
+   style.css
+   Part 1
+   Global Reset + Theme + Variables
+   Version 2.0
+=========================================================*/
 
 
+/* =========================================================
+   GOOGLE FONT
+=========================================================*/
 
-/* =====================================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   ROOT VARIABLES
+=========================================================*/
+
+:root{
+
+    /* Primary Theme */
+
+    --primary:#1E3A8A;
+    --primaryDark:#162C66;
+
+    /* Accent */
+
+    --success:#16A34A;
+    --warning:#F59E0B;
+    --danger:#DC2626;
+
+    /* Background */
+
+    --background:#EEF2F7;
+    --card:#FFFFFF;
+
+    /* Text */
+
+    --text:#1F2937;
+    --textLight:#6B7280;
+
+    /* Borders */
+
+    --border:#D7DCE5;
+
+    /* Editor */
+
+    --editor:#0F172A;
+    --editorBorder:#2563EB;
+
+    /* Radius */
+
+    --radiusSmall:8px;
+    --radiusMedium:12px;
+    --radiusLarge:16px;
+
+    /* Shadow */
+
+    --shadow:
+
+        0 2px 8px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
    RESET
-===================================================== */
+=========================================================*/
 
 *{
 
@@ -21,70 +81,191 @@
 }
 
 
+/* =========================================================
+   HTML
+=========================================================*/
 
 html{
+
+    width:100%;
+
+    height:100%;
+
+    font-size:16px;
 
     scroll-behavior:smooth;
 
 }
 
 
+/* =========================================================
+   BODY
+=========================================================*/
 
 body{
 
-    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    width:100%;
 
-    background:#eef3fa;
+    height:100vh;
 
-    color:#222;
+    overflow:hidden;
 
-    overflow-x:hidden;
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:"Inter",sans-serif;
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
 
+/* =========================================================
+   TYPOGRAPHY
+=========================================================*/
 
-/* =====================================================
-   COMMON
-===================================================== */
+h1{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   LINKS
+=========================================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* =========================================================
+   BUTTON RESET
+=========================================================*/
 
 button{
-
-    cursor:pointer;
 
     border:none;
 
     outline:none;
 
-    transition:.3s;
+    cursor:pointer;
+
+    font-family:inherit;
 
 }
 
 
+/* =========================================================
+   INPUT RESET
+=========================================================*/
 
-textarea{
+input,
+textarea,
+select{
 
-    resize:none;
+    font-family:inherit;
 
     outline:none;
 
 }
 
 
+/* =========================================================
+   IMAGE
+=========================================================*/
 
-/* =====================================================
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* =========================================================
+   LIST
+=========================================================*/
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* =========================================================
+   SELECTION
+=========================================================*/
+
+::selection{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+
+/* =========================================================
+   END OF PART 1
+=========================================================*/
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 2
+   Header
+=========================================================*/
+
+
+/* =========================================================
    HEADER
-===================================================== */
+=========================================================*/
 
 .header{
 
-    width:100%;
+    height:70px;
 
-    background:#1e3a8a;
+    background:var(--primary);
 
-    color:white;
-
-    padding:15px 25px;
+    color:#FFFFFF;
 
     display:flex;
 
@@ -92,27 +273,45 @@ textarea{
 
     align-items:center;
 
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    padding:0 25px;
+
+    border-bottom:4px solid var(--primaryDark);
+
+    box-shadow:var(--shadow);
+
+    flex-shrink:0;
 
 }
 
 
+/* =========================================================
+   TITLE
+=========================================================*/
 
 .header h1{
 
     font-size:26px;
 
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    white-space:nowrap;
+
 }
 
 
+/* =========================================================
+   HEADER RIGHT
+=========================================================*/
 
 .player{
 
     display:flex;
 
-    gap:18px;
-
     align-items:center;
+
+    gap:18px;
 
     font-size:15px;
 
@@ -121,82 +320,189 @@ textarea{
 }
 
 
+/* =========================================================
+   PLAYER ITEMS
+=========================================================*/
 
 .player span{
 
-    color:#ffd54f;
+    font-weight:700;
+
+    color:#FFD54F;
 
 }
 
 
-
-/* =====================================================
+/* =========================================================
    LOADING STATUS
-===================================================== */
+=========================================================*/
 
 #loadingStatus{
 
-    background:#0f172a;
+    background:#FFFFFF;
 
-    color:#7dd3fc;
+    color:var(--primary);
 
     padding:6px 14px;
 
-    border-radius:6px;
+    border-radius:20px;
 
     font-size:13px;
+
+    font-weight:700;
+
+    min-width:120px;
+
+    text-align:center;
 
 }
 
 
+/* =========================================================
+   TIMER
+=========================================================*/
 
-/* =====================================================
+#timer{
+
+    color:#FFEB3B;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+=========================================================*/
+
+#progressValue{
+
+    color:#4ADE80;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   XP
+=========================================================*/
+
+#playerXP{
+
+    color:#FACC15;
+
+}
+
+
+/* =========================================================
+   COINS
+=========================================================*/
+
+#playerCoins{
+
+    color:#FBBF24;
+
+}
+
+
+/* =========================================================
+   PLAYER LEVEL
+=========================================================*/
+
+#playerLevel{
+
+    color:#60A5FA;
+
+}
+
+
+/* =========================================================
+   PLAYER NAME
+=========================================================*/
+
+#playerName{
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   HEADER DIVIDER
+=========================================================*/
+
+.player::before{
+
+    content:"";
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   END OF PART 2
+=========================================================*/
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 3
+   Desktop Layout
+=========================================================*/
+
+
+/* =========================================================
    MAIN LAYOUT
-===================================================== */
+=========================================================*/
 
 .layout{
 
-    width:100%;
-
-    height:calc(100vh - 90px);
+    flex:1;
 
     display:grid;
 
-    grid-template-columns:260px 1fr 320px;
+    grid-template-columns:260px 1fr 340px;
 
     gap:15px;
 
     padding:15px;
-
-}
-
-
-
-/* =====================================================
-   COMMON PANELS
-===================================================== */
-
-.left-panel,
-
-.center-panel,
-
-.right-panel{
-
-    background:white;
-
-    border-radius:12px;
-
-    box-shadow:0 4px 15px rgba(0,0,0,.12);
 
     overflow:hidden;
 
 }
 
 
+/* =========================================================
+   COMMON PANEL
+=========================================================*/
 
-/* =====================================================
+.left-panel,
+.center-panel,
+.right-panel{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radiusMedium);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
    LEFT PANEL
-===================================================== */
+=========================================================*/
 
 .left-panel{
 
@@ -204,27 +510,12 @@ textarea{
 
     flex-direction:column;
 
-    padding:18px;
-
 }
 
 
-
-.left-panel h3{
-
-    text-align:center;
-
-    margin-bottom:15px;
-
-    color:#1e40af;
-
-}
-
-
-
-/* =====================================================
+/* =========================================================
    CENTER PANEL
-===================================================== */
+=========================================================*/
 
 .center-panel{
 
@@ -232,15 +523,14 @@ textarea{
 
     flex-direction:column;
 
-    padding:20px;
+    overflow:hidden;
 
 }
 
 
-
-/* =====================================================
+/* =========================================================
    RIGHT PANEL
-===================================================== */
+=========================================================*/
 
 .right-panel{
 
@@ -248,281 +538,1199 @@ textarea{
 
     flex-direction:column;
 
-    padding:20px;
-
 }
 
 
+/* =========================================================
+   PANEL HEADER
+=========================================================*/
 
-/* =====================================================
-   SECTION HEADINGS
-===================================================== */
+.left-panel h3,
+.right-panel h3{
 
-h2{
+    background:var(--primary);
 
-    color:#1d4ed8;
+    color:#fff;
 
-    margin-bottom:10px;
+    padding:14px 18px;
 
-}
-
-
-
-h3{
-
-    color:#1e3a8a;
-
-    margin-bottom:10px;
-
-}
-
-
-
-/* =====================================================
-   CARDS
-===================================================== */
-
-.card{
-
-    background:#f8fbff;
-
-    border:1px solid #dbeafe;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    margin-bottom:15px;
-
-}
-
-
-
-/* =====================================================
-   QUESTION INFO
-===================================================== */
-
-#questionTitle{
-
-    font-size:24px;
-
-    margin-bottom:10px;
-
-}
-
-
-
-#questionTopic{
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-}
-
-
-
-#questionDescription{
-
-    margin-top:15px;
-
-    background:#f8fafc;
-
-    border-left:5px solid #2563eb;
-
-    padding:18px;
-
-    border-radius:8px;
-
-    line-height:1.7;
-
-    overflow-y:auto;
-
-}
-
-
-
-/* =====================================================
-   END OF PART 1
-===================================================== */
-
-/* =====================================================
-   CODING BATTLE ARENA
-   MASTER CHALLENGE
-   style.css (Part 2)
-===================================================== */
-
-
-
-/* =====================================================
-   QUESTION PALETTE
-===================================================== */
-
-#questionPalette{
-
-    display:grid;
-
-    grid-template-columns:repeat(5,1fr);
-
-    gap:10px;
-
-    margin-top:10px;
-
-}
-
-
-
-/* =====================================================
-   PALETTE BUTTON
-===================================================== */
-
-.paletteButton{
-
-    width:45px;
-
-    height:45px;
-
-    border:none;
-
-    border-radius:8px;
-
-    background:#e2e8f0;
-
-    color:#1e293b;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-}
-
-
-
-.paletteButton:hover{
-
-    background:#2563eb;
-
-    color:white;
-
-    transform:scale(1.08);
-
-}
-
-
-
-/* =====================================================
-   CURRENT QUESTION
-===================================================== */
-
-.paletteButton.current{
-
-    background:#2563eb;
-
-    color:white;
-
-    box-shadow:0 0 10px rgba(37,99,235,.45);
-
-}
-
-
-
-/* =====================================================
-   COMPLETED QUESTION
-===================================================== */
-
-.paletteButton.completed{
-
-    background:#16a34a;
-
-    color:white;
-
-}
-
-
-
-.paletteButton.completed:hover{
-
-    background:#15803d;
-
-}
-
-
-
-/* =====================================================
-   QUESTION COUNTER
-===================================================== */
-
-.counterCard{
-
-    margin-top:18px;
-
-    background:#eff6ff;
-
-    border-radius:10px;
-
-    padding:12px;
-
-    text-align:center;
-
-}
-
-
-
-.counterCard h2{
-
-    color:#2563eb;
-
-    margin-bottom:5px;
-
-}
-
-
-
-.counterCard p{
-
-    color:#475569;
-
-}
-
-
-
-/* =====================================================
-   PROGRESS CARD
-===================================================== */
-
-.progressCard{
-
-    margin-top:18px;
-
-}
-
-
-
-.progressTitle{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-bottom:8px;
+    font-size:18px;
 
     font-weight:600;
 
 }
 
 
+/* =========================================================
+   CENTER HEADER
+=========================================================*/
 
-.progressBar{
+.center-panel h2{
+
+    padding:18px 20px 10px;
+
+    color:var(--primary);
+
+}
+
+
+/* =========================================================
+   PANEL BODY
+=========================================================*/
+
+.left-panel{
+
+    padding-bottom:15px;
+
+}
+
+.right-panel{
+
+    padding-bottom:15px;
+
+}
+
+
+/* =========================================================
+   QUESTION AREA
+=========================================================*/
+
+#questionDescription{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:0 20px 15px;
+
+}
+
+
+/* =========================================================
+   QUESTION TITLE BAR
+=========================================================*/
+
+#questionNumber{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+#totalQuestions{
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   QUESTION TOPIC
+=========================================================*/
+
+#questionTopic{
+
+    color:var(--success);
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   SECTION SPACING
+=========================================================*/
+
+.center-panel>div,
+
+.center-panel>p{
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+}
+
+
+/* =========================================================
+   HORIZONTAL RULE
+=========================================================*/
+
+hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+    margin:15px 0;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+=========================================================*/
+
+.left-panel::-webkit-scrollbar,
+.center-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar,
+#questionDescription::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.center-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb,
+#questionDescription::-webkit-scrollbar-thumb{
+
+    background:#BFC7D4;
+
+    border-radius:20px;
+
+}
+
+
+/* =========================================================
+   END OF PART 3
+=========================================================*/
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 4
+   Question Section
+=========================================================*/
+
+
+/* =========================================================
+   QUESTION CONTAINER
+=========================================================*/
+
+.questionSection{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   QUESTION HEADER
+=========================================================*/
+
+.questionHeader{
+
+    padding:18px 22px 12px;
+
+    border-bottom:1px solid var(--border);
+
+    background:#F8FAFC;
+
+}
+
+
+/* =========================================================
+   QUESTION TITLE
+=========================================================*/
+
+#questionTitle{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+
+/* =========================================================
+   QUESTION INFO
+=========================================================*/
+
+.questionInfo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+/* =========================================================
+   BADGES
+=========================================================*/
+
+.badge{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+.topicBadge{
+
+    background:#2563EB;
+
+}
+
+.difficultyBadge{
+
+    background:#F59E0B;
+
+}
+
+.xpBadge{
+
+    background:#16A34A;
+
+}
+
+.coinBadge{
+
+    background:#9333EA;
+
+}
+
+
+/* =========================================================
+   QUESTION BODY
+=========================================================*/
+
+#questionDescription{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:20px;
+
+    background:#FFFFFF;
+
+}
+
+
+/* =========================================================
+   SECTION CARD
+=========================================================*/
+
+.questionCard{
+
+    margin-bottom:18px;
+
+    padding:16px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    background:#FCFCFD;
+
+}
+
+
+/* =========================================================
+   CARD HEADING
+=========================================================*/
+
+.questionCard h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+
+/* =========================================================
+   CARD CONTENT
+=========================================================*/
+
+.questionCard p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   CODE BLOCKS
+=========================================================*/
+
+.questionCode{
+
+    margin-top:10px;
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    font-family:Consolas,monospace;
+
+    white-space:pre-wrap;
+
+    overflow-x:auto;
+
+}
+
+
+/* =========================================================
+   TEST CASE TABLE
+=========================================================*/
+
+.testTable{
 
     width:100%;
 
+    border-collapse:collapse;
+
+    margin-top:12px;
+
+}
+
+.testTable th{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:10px;
+
+    text-align:left;
+
+}
+
+.testTable td{
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+    vertical-align:top;
+
+}
+
+.testTable tr:nth-child(even){
+
+    background:#F8FAFC;
+
+}
+
+
+/* =========================================================
+   HIDDEN TEST INFO
+=========================================================*/
+
+.hiddenTests{
+
+    margin-top:15px;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    background:#FEF3C7;
+
+    color:#92400E;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   END OF PART 4
+=========================================================*/
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 5
+   Python Editor
+=========================================================*/
+
+
+/* =========================================================
+   EDITOR SECTION
+=========================================================*/
+
+.editorSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:55%;
+
+    border-top:2px solid var(--border);
+
+    background:#F8FAFC;
+
+}
+
+
+/* =========================================================
+   EDITOR HEADER
+=========================================================*/
+
+.editorHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 20px;
+
+    background:#E2E8F0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+.editorHeader h3{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   EDITOR CONTAINER
+=========================================================*/
+
+.editorContainer{
+
+    flex:1;
+
+    padding:15px;
+
+    background:#0F172A;
+
+}
+
+
+/* =========================================================
+   PYTHON TEXTAREA
+=========================================================*/
+
+#codingArea{
+
+    width:100%;
+
+    height:100%;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    font-family:
+
+        Consolas,
+
+        "Courier New",
+
+        monospace;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    overflow:auto;
+
+    caret-color:#FFFFFF;
+
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+=========================================================*/
+
+#codingArea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+
+/* =========================================================
+   FOCUS
+=========================================================*/
+
+#codingArea:focus{
+
+    box-shadow:
+
+        inset 0 0 0 2px #2563EB;
+
+}
+
+
+/* =========================================================
+   EDITOR SCROLLBAR
+=========================================================*/
+
+#codingArea::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+#codingArea::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:20px;
+
+}
+
+#codingArea::-webkit-scrollbar-track{
+
+    background:#1E293B;
+
+}
+
+
+/* =========================================================
+   BUTTON BAR
+=========================================================*/
+
+.editorButtons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    padding:15px 20px;
+
+    background:#FFFFFF;
+
+    border-top:1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   RUN BUTTON
+=========================================================*/
+
+#runButton{
+
+    background:var(--success);
+
+    color:#FFFFFF;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+#runButton:hover{
+
+    background:#15803D;
+
+}
+
+
+/* =========================================================
+   RESET BUTTON
+=========================================================*/
+
+#resetButton{
+
+    background:var(--warning);
+
+    color:#FFFFFF;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+#resetButton:hover{
+
+    background:#D97706;
+
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+=========================================================*/
+
+#runButton:active,
+#resetButton:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* =========================================================
+   DISABLED
+=========================================================*/
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   END OF PART 5
+=========================================================*/
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 6
+   Output Panel
+=========================================================*/
+
+
+/* =========================================================
+   OUTPUT PANEL
+=========================================================*/
+
+.right-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   OUTPUT HEADER
+=========================================================*/
+
+.right-panel h3{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+    padding:14px 18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   OUTPUT CONTAINER
+=========================================================*/
+
+.outputContainer{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   PROGRAM OUTPUT
+=========================================================*/
+
+#programOutput{
+
+    flex:1;
+
+    margin:15px;
+
+    padding:15px;
+
+    background:#111827;
+
+    color:#22C55E;
+
+    border-radius:10px;
+
+    border:1px solid #374151;
+
+    font-family:
+
+        Consolas,
+
+        "Courier New",
+
+        monospace;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    overflow:auto;
+
+    white-space:pre-wrap;
+
+}
+
+
+/* =========================================================
+   RESULT CARD
+=========================================================*/
+
+.resultCard{
+
+    margin:0 15px 15px;
+
+    padding:15px;
+
+    background:#F8FAFC;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+}
+
+
+/* =========================================================
+   RESULT ROW
+=========================================================*/
+
+.resultRow{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:8px 0;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+
+.resultRow:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/* =========================================================
+   LABEL
+=========================================================*/
+
+.resultLabel{
+
+    color:var(--textLight);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   VALUE
+=========================================================*/
+
+.resultValue{
+
+    color:var(--text);
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================================
+   STATUS
+=========================================================*/
+
+#resultStatus{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   PASS
+=========================================================*/
+
+.pass{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+
+/* =========================================================
+   FAIL
+=========================================================*/
+
+.fail{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+
+/* =========================================================
+   SCORE
+=========================================================*/
+
+#score{
+
+    color:#2563EB;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   RUNTIME
+=========================================================*/
+
+#runtime{
+
+    color:#9333EA;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   TEST CASE COUNTS
+=========================================================*/
+
+#visiblePassed{
+
+    color:#16A34A;
+
+    font-weight:700;
+
+}
+
+#hiddenPassed{
+
+    color:#2563EB;
+
+    font-weight:700;
+
+}
+
+#failedCases{
+
+    color:#DC2626;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   OUTPUT SCROLLBAR
+=========================================================*/
+
+#programOutput::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#programOutput::-webkit-scrollbar-thumb{
+
+    background:#4B5563;
+
+    border-radius:20px;
+
+}
+
+#programOutput::-webkit-scrollbar-track{
+
+    background:#1F2937;
+
+}
+
+
+/* =========================================================
+   END OF PART 6
+=========================================================*/
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 7
+   Left Panel
+=========================================================*/
+
+
+/* =========================================================
+   LEFT PANEL
+=========================================================*/
+
+.left-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   PANEL TITLE
+=========================================================*/
+
+.left-panel h3{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+    padding:14px 18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   QUESTION PALETTE
+=========================================================*/
+
+#questionPalette{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:15px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+
+/* =========================================================
+   PALETTE BUTTON
+=========================================================*/
+
+.paletteButton{
+
+    height:46px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+
+.paletteButton:hover{
+
+    background:#EEF4FF;
+
+    border-color:#2563EB;
+
+}
+
+
+/* =========================================================
+   CURRENT QUESTION
+=========================================================*/
+
+.paletteButton.current{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    border-color:#2563EB;
+
+}
+
+
+/* =========================================================
+   COMPLETED QUESTION
+=========================================================*/
+
+.paletteButton.completed{
+
+    background:#16A34A;
+
+    color:#FFFFFF;
+
+    border-color:#16A34A;
+
+}
+
+
+/* =========================================================
+   CURRENT + COMPLETED
+=========================================================*/
+
+.paletteButton.current.completed{
+
+    background:#0F766E;
+
+    border-color:#0F766E;
+
+}
+
+
+/* =========================================================
+   PROGRESS SECTION
+=========================================================*/
+
+.progressSection{
+
+    padding:15px;
+
+    border-top:1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   PROGRESS LABEL
+=========================================================*/
+
+.progressTitle{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+=========================================================*/
+
+.progressBar{
+
     height:12px;
 
-    background:#dbeafe;
+    background:#E5E7EB;
 
     border-radius:20px;
 
@@ -531,630 +1739,472 @@ h3{
 }
 
 
-
 .progressFill{
-
-    width:0%;
 
     height:100%;
 
-    background:#22c55e;
+    width:0%;
 
-    transition:.5s;
+    background:#16A34A;
 
-}
-
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.navigation{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-top:20px;
+    transition:.4s;
 
 }
 
 
+/* =========================================================
+   NAVIGATION BUTTONS
+=========================================================*/
 
-/* =====================================================
-   COMMON BUTTON
-===================================================== */
+.left-panel button{
 
-.btn{
+    width:calc(100% - 30px);
 
-    border:none;
+    margin:8px auto;
+
+    padding:12px;
 
     border-radius:8px;
-
-    padding:12px 20px;
 
     font-size:15px;
 
     font-weight:600;
 
-    cursor:pointer;
-
-    transition:.3s;
-
 }
 
 
-
-/* =====================================================
-   PREVIOUS BUTTON
-===================================================== */
+/* =========================================================
+   PREVIOUS
+=========================================================*/
 
 #previousButton{
 
-    background:#64748b;
+    background:#475569;
 
-    color:white;
+    color:#FFFFFF;
 
 }
-
 
 
 #previousButton:hover{
 
-    background:#475569;
+    background:#334155;
 
 }
 
 
-
-/* =====================================================
-   NEXT BUTTON
-===================================================== */
+/* =========================================================
+   NEXT
+=========================================================*/
 
 #nextButton{
 
-    background:#2563eb;
+    background:#2563EB;
 
-    color:white;
+    color:#FFFFFF;
 
 }
-
 
 
 #nextButton:hover{
 
-    background:#1d4ed8;
+    background:#1D4ED8;
 
 }
 
 
-
-/* =====================================================
-   RUN BUTTON
-===================================================== */
-
-#runButton{
-
-    width:100%;
-
-    margin-top:18px;
-
-    background:#16a34a;
-
-    color:white;
-
-}
-
-
-
-#runButton:hover{
-
-    background:#15803d;
-
-}
-
-
-
-/* =====================================================
-   RESET BUTTON
-===================================================== */
-
-#resetButton{
-
-    width:100%;
-
-    margin-top:10px;
-
-    background:#f59e0b;
-
-    color:white;
-
-}
-
-
-
-#resetButton:hover{
-
-    background:#d97706;
-
-}
-
-
-
-/* =====================================================
-   SUBMIT BUTTON
-===================================================== */
+/* =========================================================
+   SUBMIT
+=========================================================*/
 
 #submitButton{
 
-    width:100%;
+    background:#DC2626;
 
-    margin-top:18px;
+    color:#FFFFFF;
 
-    background:#dc2626;
-
-    color:white;
+    margin-top:12px;
 
 }
-
 
 
 #submitButton:hover{
 
-    background:#b91c1c;
+    background:#B91C1C;
 
 }
 
 
+/* =========================================================
+   DISABLED
+=========================================================*/
 
-/* =====================================================
-   DISABLED BUTTON
-===================================================== */
+#previousButton:disabled,
+#nextButton:disabled{
 
-button:disabled{
-
-    opacity:.55;
+    opacity:.5;
 
     cursor:not-allowed;
 
 }
 
 
-
-/* =====================================================
-   END OF PART 2
-===================================================== */
-
-/* =====================================================
-   CODING BATTLE ARENA
-   MASTER CHALLENGE
-   style.css (Part 3)
-===================================================== */
-
-
-
-/* =====================================================
-   PYTHON EDITOR
-===================================================== */
-
-.editorContainer{
-
-    margin-top:20px;
-
-}
-
-
-
-.editorTitle{
-
-    font-size:18px;
-
-    font-weight:700;
-
-    color:#1e40af;
-
-    margin-bottom:10px;
-
-}
-
-
-
-#codingArea{
-
-    width:100%;
-
-    height:320px;
-
-    background:#0f172a;
-
-    color:#f8fafc;
-
-    border:2px solid #1e40af;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    font-size:15px;
-
-    font-family:Consolas,Monaco,Courier New,monospace;
-
-    line-height:1.6;
-
-    resize:vertical;
-
-    outline:none;
-
-}
-
-
-
-#codingArea:focus{
-
-    border-color:#3b82f6;
-
-    box-shadow:0 0 10px rgba(59,130,246,.4);
-
-}
-
-
-
-/* =====================================================
-   OUTPUT CONSOLE
-===================================================== */
-
-.outputContainer{
-
-    margin-top:20px;
-
-}
-
-
-
-.outputTitle{
-
-    font-size:18px;
-
-    font-weight:700;
-
-    color:#1e40af;
-
-    margin-bottom:10px;
-
-}
-
-
-
-#programOutput{
-
-    width:100%;
-
-    min-height:180px;
-
-    background:#111827;
-
-    color:#22c55e;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    overflow:auto;
-
-    white-space:pre-wrap;
-
-    font-family:Consolas,Monaco,monospace;
-
-    font-size:14px;
-
-    line-height:1.5;
-
-}
-
-
-
-/* =====================================================
-   RESULT PANEL
-===================================================== */
-
-.resultCard{
-
-    margin-top:20px;
-
-    background:#f8fafc;
-
-    border:1px solid #dbeafe;
-
-    border-radius:10px;
-
-    padding:15px;
-
-}
-
-
-
-.resultCard h3{
-
-    color:#1d4ed8;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.resultRow{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-bottom:10px;
-
-    font-size:15px;
-
-}
-
-
-
-.resultValue{
-
-    font-weight:700;
-
-}
-
-
-
-/* =====================================================
-   PASS / FAIL STATUS
-===================================================== */
-
-.pass{
-
-    color:#16a34a;
-
-    font-weight:bold;
-
-}
-
-
-
-.fail{
-
-    color:#dc2626;
-
-    font-weight:bold;
-
-}
-
-
-
-/* =====================================================
-   PLAYER STATS
-===================================================== */
-
-.statsGrid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:12px;
-
-    margin-top:20px;
-
-}
-
-
-
-.statCard{
-
-    background:#eff6ff;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    text-align:center;
-
-}
-
-
-
-.statCard h4{
-
-    color:#2563eb;
-
-    margin-bottom:8px;
-
-}
-
-
-
-.statValue{
-
-    font-size:22px;
-
-    font-weight:bold;
-
-}
-
-
-
-/* =====================================================
-   TIMER
-===================================================== */
-
-.timerCard{
-
-    margin-top:20px;
-
-    background:#1e3a8a;
-
-    color:white;
-
-    border-radius:10px;
-
-    text-align:center;
-
-    padding:15px;
-
-}
-
-
-
-#timer{
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-
-    margin-top:5px;
-
-}
-
-
-
-/* =====================================================
-   XP & COINS
-===================================================== */
-
-.rewardCard{
-
-    margin-top:20px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:10px;
-
-}
-
-
-
-.rewardBox{
-
-    flex:1;
-
-    background:#fef3c7;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    text-align:center;
-
-}
-
-
-
-.rewardBox h4{
-
-    margin-bottom:8px;
-
-    color:#92400e;
-
-}
-
-
-
-.rewardValue{
-
-    font-size:22px;
-
-    font-weight:bold;
-
-}
-
-
-
-/* =====================================================
-   FINAL RESULT PANEL
-===================================================== */
-
-#resultPanel{
-
-    display:none;
-
-    margin-top:20px;
-
-    background:#ecfdf5;
-
-    border:2px solid #22c55e;
-
-    border-radius:12px;
-
-    padding:20px;
-
-}
-
-
-
-#resultPanel h2{
-
-    color:#15803d;
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-}
-
-
-
-/* =====================================================
-   SCROLLBAR
-===================================================== */
-
-::-webkit-scrollbar{
+/* =========================================================
+   LEFT PANEL SCROLLBAR
+=========================================================*/
+
+#questionPalette::-webkit-scrollbar{
 
     width:8px;
 
 }
 
+#questionPalette::-webkit-scrollbar-thumb{
+
+    background:#BFC7D4;
+
+    border-radius:20px;
+
+}
 
 
-::-webkit-scrollbar-thumb{
+/* =========================================================
+   END OF PART 7
+=========================================================*/
 
-    background:#94a3b8;
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 8
+   Result Panel
+=========================================================*/
+
+
+/* =========================================================
+   RESULT PANEL
+=========================================================*/
+
+#resultPanel{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+
+/* =========================================================
+   RESULT CARD
+=========================================================*/
+
+.resultContainer{
+
+    width:700px;
+
+    max-width:95%;
+
+    background:#FFFFFF;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   RESULT HEADER
+=========================================================*/
+
+.resultContainer h2{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:28px;
+
+}
+
+
+/* =========================================================
+   RESULT BODY
+=========================================================*/
+
+.resultBody{
+
+    padding:30px;
+
+}
+
+
+/* =========================================================
+   RESULT GRID
+=========================================================*/
+
+.resultGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =========================================================
+   RESULT BOX
+=========================================================*/
+
+.resultBox{
+
+    background:#F8FAFC;
+
+    border:1px solid var(--border);
 
     border-radius:10px;
 
-}
-
-
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#64748b;
-
-}
-
-
-
-/* =====================================================
-   UTILITY CLASSES
-===================================================== */
-
-.hidden{
-
-    display:none;
-
-}
-
-
-
-.textCenter{
+    padding:18px;
 
     text-align:center;
 
 }
 
 
+/* =========================================================
+   RESULT LABEL
+=========================================================*/
+
+.resultBox h3{
+
+    font-size:15px;
+
+    color:var(--textLight);
+
+    margin-bottom:10px;
+
+}
+
+
+/* =========================================================
+   RESULT VALUE
+=========================================================*/
+
+.resultBox span{
+
+    display:block;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   COLORS
+=========================================================*/
+
+#finalPassed{
+
+    color:#16A34A;
+
+}
+
+#finalFailed{
+
+    color:#DC2626;
+
+}
+
+#finalXP{
+
+    color:#2563EB;
+
+}
+
+#finalCoins{
+
+    color:#9333EA;
+
+}
+
+#finalAccuracy{
+
+    color:#F59E0B;
+
+}
+
+
+/* =========================================================
+   RESULT FOOTER
+=========================================================*/
+
+.resultFooter{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:25px;
+
+    border-top:1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   RESULT BUTTONS
+=========================================================*/
+
+.resultFooter button{
+
+    min-width:180px;
+
+    padding:14px 20px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   RESTART BUTTON
+=========================================================*/
+
+.restartButton{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+
+.restartButton:hover{
+
+    background:#1D4ED8;
+
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+=========================================================*/
+
+.closeButton{
+
+    background:#16A34A;
+
+    color:#FFFFFF;
+
+}
+
+
+.closeButton:hover{
+
+    background:#15803D;
+
+}
+
+
+/* =========================================================
+   END OF PART 8
+=========================================================*/
+
+
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 9
+   Utilities + Animations + Desktop Polish
+=========================================================*/
+
+
+/* =========================================================
+   COMMON CARDS
+=========================================================*/
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* =========================================================
+   FLEX UTILITIES
+=========================================================*/
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.space-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* =========================================================
+   SPACING
+=========================================================*/
 
 .mt10{
 
@@ -1162,7 +2212,11 @@ button:disabled{
 
 }
 
+.mt15{
 
+    margin-top:15px;
+
+}
 
 .mt20{
 
@@ -1170,15 +2224,17 @@ button:disabled{
 
 }
 
-
-
 .mb10{
 
     margin-bottom:10px;
 
 }
 
+.mb15{
 
+    margin-bottom:15px;
+
+}
 
 .mb20{
 
@@ -1186,180 +2242,153 @@ button:disabled{
 
 }
 
+.p10{
 
-
-/* =====================================================
-   END OF PART 3
-===================================================== */
-
-/* =====================================================
-   CODING BATTLE ARENA
-   MASTER CHALLENGE
-   style.css (Part 4)
-===================================================== */
-
-
-
-/* =====================================================
-   PANEL HOVER EFFECT
-===================================================== */
-
-.left-panel,
-.center-panel,
-.right-panel{
-
-    transition:all .3s ease;
+    padding:10px;
 
 }
 
-.left-panel:hover,
-.center-panel:hover,
-.right-panel:hover{
+.p15{
 
-    transform:translateY(-3px);
+    padding:15px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.p20{
+
+    padding:20px;
 
 }
 
 
+/* =========================================================
+   TEXT
+=========================================================*/
 
-/* =====================================================
-   BUTTON ANIMATION
-===================================================== */
+.text-center{
 
-button{
-
-    transition:all .25s ease;
-
-}
-
-button:hover{
-
-    transform:translateY(-2px);
+    text-align:center;
 
 }
 
-button:active{
+.text-right{
 
-    transform:scale(.96);
-
-}
-
-
-
-/* =====================================================
-   CARD ANIMATION
-===================================================== */
-
-.card,
-.resultCard,
-.statCard,
-.rewardBox,
-.timerCard{
-
-    transition:all .3s ease;
+    text-align:right;
 
 }
 
-.card:hover,
-.resultCard:hover,
-.statCard:hover,
-.rewardBox:hover{
+.bold{
 
-    transform:translateY(-4px);
+    font-weight:700;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.small{
+
+    font-size:13px;
+
+}
+
+.large{
+
+    font-size:20px;
 
 }
 
 
-
-/* =====================================================
-   INPUT EFFECT
-===================================================== */
-
-textarea{
-
-    transition:.3s;
-
-}
-
-textarea:focus{
-
-    transform:scale(1.003);
-
-}
-
-
-
-/* =====================================================
-   SUCCESS
-===================================================== */
+/* =========================================================
+   COLORS
+=========================================================*/
 
 .success{
 
-    background:#dcfce7;
-
-    color:#15803d;
-
-    border:2px solid #16a34a;
+    color:var(--success);
 
 }
-
-
-
-/* =====================================================
-   ERROR
-===================================================== */
-
-.error{
-
-    background:#fee2e2;
-
-    color:#b91c1c;
-
-    border:2px solid #dc2626;
-
-}
-
-
-
-/* =====================================================
-   WARNING
-===================================================== */
 
 .warning{
 
-    background:#fef9c3;
+    color:var(--warning);
 
-    color:#a16207;
+}
 
-    border:2px solid #eab308;
+.danger{
+
+    color:var(--danger);
+
+}
+
+.primary{
+
+    color:var(--primary);
 
 }
 
 
+/* =========================================================
+   BUTTON ANIMATION
+=========================================================*/
 
-/* =====================================================
-   INFO
-===================================================== */
+button{
 
-.info{
+    transition:
 
-    background:#dbeafe;
+        background .25s,
 
-    color:#1d4ed8;
+        transform .15s,
 
-    border:2px solid #2563eb;
+        box-shadow .25s;
 
 }
 
 
+button:hover{
 
-/* =====================================================
+    box-shadow:
+
+        0 4px 10px rgba(0,0,0,.18);
+
+}
+
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* =========================================================
+   PANEL HOVER
+=========================================================*/
+
+.left-panel,
+
+.center-panel,
+
+.right-panel{
+
+    transition:.25s;
+
+}
+
+
+.left-panel:hover,
+
+.center-panel:hover,
+
+.right-panel:hover{
+
+    box-shadow:
+
+        0 6px 16px rgba(0,0,0,.12);
+
+}
+
+
+/* =========================================================
    FADE ANIMATION
-===================================================== */
+=========================================================*/
 
 @keyframes fadeIn{
 
@@ -1378,18 +2407,16 @@ textarea:focus{
 }
 
 
-
 .fadeIn{
 
-    animation:fadeIn .5s ease;
+    animation:fadeIn .4s ease;
 
 }
 
 
-
-/* =====================================================
+/* =========================================================
    SLIDE UP
-===================================================== */
+=========================================================*/
 
 @keyframes slideUp{
 
@@ -1412,183 +2439,368 @@ textarea:focus{
 }
 
 
-
 .slideUp{
 
-    animation:slideUp .4s ease;
+    animation:slideUp .35s ease;
 
 }
 
 
+/* =========================================================
+   SUCCESS FLASH
+=========================================================*/
 
-/* =====================================================
-   PULSE
-===================================================== */
-
-@keyframes pulse{
+@keyframes successFlash{
 
     0%{
 
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.05);
+        background:#DCFCE7;
 
     }
 
     100%{
 
-        transform:scale(1);
+        background:transparent;
 
     }
 
 }
 
 
+.flashSuccess{
 
-.pulse{
-
-    animation:pulse .8s infinite;
+    animation:successFlash .8s;
 
 }
 
 
+/* =========================================================
+   ERROR FLASH
+=========================================================*/
 
-/* =====================================================
-   SPIN
-===================================================== */
+@keyframes errorFlash{
 
-@keyframes spin{
+    0%{
 
-    from{
-
-        transform:rotate(0deg);
+        background:#FEE2E2;
 
     }
 
-    to{
+    100%{
 
-        transform:rotate(360deg);
+        background:transparent;
 
     }
 
 }
 
 
+.flashError{
 
-.loading{
-
-    animation:spin 1s linear infinite;
+    animation:errorFlash .8s;
 
 }
 
 
+/* =========================================================
+   SCROLLBAR (GLOBAL)
+=========================================================*/
 
-/* =====================================================
-   BADGES
-===================================================== */
+::-webkit-scrollbar{
 
-.badge{
+    width:10px;
 
-    display:inline-block;
+    height:10px;
 
-    padding:5px 12px;
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#E5E7EB;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#94A3B8;
 
     border-radius:20px;
 
-    font-size:12px;
+}
 
-    font-weight:bold;
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748B;
 
 }
 
 
+/* =========================================================
+   REMOVE BLUE HIGHLIGHT
+=========================================================*/
 
-.badgeEasy{
+button,
 
-    background:#22c55e;
+textarea{
 
-    color:white;
-
-}
-
-
-
-.badgeMedium{
-
-    background:#f59e0b;
-
-    color:white;
+    -webkit-tap-highlight-color:transparent;
 
 }
 
 
+/* =========================================================
+   DESKTOP OPTIMIZATION
+=========================================================*/
 
-.badgeHard{
+@media (min-width:1366px){
 
-    background:#dc2626;
+    body{
 
-    color:white;
+        font-size:16px;
 
-}
-
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer{
-
-    margin-top:20px;
-
-    padding:15px;
-
-    text-align:center;
-
-    color:#64748b;
-
-    font-size:14px;
+    }
 
 }
 
 
+/* =========================================================
+   END OF PART 9
+=========================================================*/
 
-/* =====================================================
+/* =========================================================
+   CODING BATTLE ARENA
+   MASTER CHALLENGE
+   style.css
+   Part 10
+   Final Polish
+   Version 2.0
+=========================================================*/
+
+
+/* =========================================================
+   REMOVE UNWANTED OUTLINES
+=========================================================*/
+
+button:focus,
+textarea:focus,
+input:focus{
+
+    outline:none;
+
+}
+
+
+/* =========================================================
+   SELECTION
+=========================================================*/
+
+#codingArea::selection{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+
+/* =========================================================
+   PRE BLOCKS
+=========================================================*/
+
+pre{
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+
+/* =========================================================
+   TABLE
+=========================================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+th,
+td{
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   SMOOTH TRANSITIONS
+=========================================================*/
+
+*{
+
+    transition:
+
+        background-color .20s,
+
+        border-color .20s,
+
+        color .20s;
+
+}
+
+
+/* =========================================================
+   HIDE UNUSED ELEMENTS
+=========================================================*/
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+.visible{
+
+    display:block !important;
+
+}
+
+
+/* =========================================================
+   FULLSCREEN SUPPORT
+=========================================================*/
+
+:fullscreen{
+
+    background:var(--background);
+
+}
+
+
+:-webkit-full-screen{
+
+    background:var(--background);
+
+}
+
+
+/* =========================================================
+   LOADING STATE
+=========================================================*/
+
+.loading{
+
+    opacity:.65;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   CURSOR
+=========================================================*/
+
+.pointer{
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
    PRINT
-===================================================== */
+=========================================================*/
 
 @media print{
 
     body{
 
-        background:white;
+        background:#FFFFFF;
 
     }
 
     .left-panel,
+
     .right-panel,
+
+    .editorSection,
+
+    .editorButtons,
+
     button{
 
-        display:none;
-
-    }
-
-    .center-panel{
-
-        width:100%;
-
-        box-shadow:none;
+        display:none !important;
 
     }
 
 }
 
 
+/* =========================================================
+   LARGE DESKTOPS
+=========================================================*/
 
-/* =====================================================
-   END OF STYLE.CSS
-===================================================== */
+@media(min-width:1600px){
+
+    .layout{
+
+        grid-template-columns:
+
+            280px
+
+            1fr
+
+            360px;
+
+    }
+
+}
+
+
+/* =========================================================
+   1366 DESKTOP
+=========================================================*/
+
+@media(max-width:1366px){
+
+    .layout{
+
+        grid-template-columns:
+
+            240px
+
+            1fr
+
+            300px;
+
+    }
+
+}
+
+
+/* =========================================================
+   APPLICATION READY
+=========================================================*/
+
+body.ready{
+
+    animation:fadeIn .4s ease;
+
+}
+
+
+/* =========================================================
+   END OF FILE
+=========================================================*/
