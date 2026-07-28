@@ -424,6 +424,9 @@ async function loadQuestionBank(){
 
         await response.json();
 
+       console.log("Question Bank:", App.questionBank);
+console.log("Length:", App.questionBank.length);
+
     }
 
     catch(error){
