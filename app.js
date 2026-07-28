@@ -491,85 +491,227 @@ function getCurrentQuestion(){
    DISPLAY QUESTION
 ===================================================== */
 
+
+/* =====================================================
+   DISPLAY QUESTION
+===================================================== */
+
 function displayQuestion(){
 
-    let question =
+    const question = getCurrentQuestion();
 
-    getCurrentQuestion();
+    if(!question) return;
 
-    if(!question){
 
-        return;
+    /* -----------------------------
+       TOP INFORMATION
+    ----------------------------- */
+
+    updateElement(
+        "questionNumber",
+        App.currentQuestionIndex + 1
+    );
+
+    updateElement(
+        "totalQuestions",
+        App.session.questions.length
+    );
+
+    updateElement(
+        "questionTitle",
+        question.title
+    );
+
+
+    /* -----------------------------
+       BUILD VISIBLE TEST TABLE
+    ----------------------------- */
+
+    let visibleRows = "";
+
+    if(question.visibleTestCases){
+
+        question.visibleTestCases.forEach(function(test,index){
+
+            visibleRows +=
+
+            `<tr>
+
+                <td>${index+1}</td>
+
+                <td><pre>${test.input}</pre></td>
+
+                <td><pre>${test.output}</pre></td>
+
+            </tr>`;
+
+        });
 
     }
 
-    updateElement(
 
-        "questionNumber",
+    /* -----------------------------
+       COMPLETE QUESTION HTML
+    ----------------------------- */
 
-        App.currentQuestionIndex+1
+    $("questionDescription").innerHTML =
 
-    );
+    `
 
-    updateElement(
+    <div class="questionHeader">
 
-        "totalQuestions",
+        <div class="questionInfo">
 
-        App.session.questions.length
+            <span class="badge topicBadge">
+                ${question.topic}
+            </span>
 
-    );
+            <span class="badge difficultyBadge">
+                ${question.difficulty}
+            </span>
 
-    updateElement(
+            <span class="badge xpBadge">
+                ⭐ ${question.xp} XP
+            </span>
 
-        "questionTitle",
+            <span class="badge coinBadge">
+                🪙 ${question.coins} Coins
+            </span>
 
-        question.title
+        </div>
 
-    );
+    </div>
 
-    updateElement(
 
-        "questionTopic",
 
-        question.topic
+    <div class="questionCard">
 
-    );
+        <h3>📖 Case Study</h3>
 
-    $("questionDescription").innerHTML=
+        <p>${question.caseStudy}</p>
 
-        "<h3>Case Study</h3>"
+    </div>
 
-        +
 
-        "<p>"+
 
-        question.caseStudy+
+    <div class="questionCard">
 
-        "</p>"
+        <h3>🎯 Problem Statement</h3>
 
-        +
+        <p>${question.statement}</p>
 
-        "<h3>Problem Statement</h3>"
+    </div>
 
-        +
 
-        "<p>"+
 
-        question.statement+
+    <div class="questionCard">
 
-        "</p>";
+        <h3>📌 Constraints</h3>
 
-    PythonEngine.setQuestion(
+        <p>${question.constraints}</p>
 
-        question
+    </div>
 
-    );
 
-    restoreSavedCode(
 
-        question.id
+    <div class="questionCard">
 
-    );
+        <h3>⌨ Sample Input</h3>
+
+        <div class="questionCode">
+
+${question.sampleInput}
+
+        </div>
+
+    </div>
+
+
+
+    <div class="questionCard">
+
+        <h3>✅ Sample Output</h3>
+
+        <div class="questionCode">
+
+${question.sampleOutput}
+
+        </div>
+
+    </div>
+
+
+
+    <div class="questionCard">
+
+        <h3>🧪 Visible Test Cases</h3>
+
+        <table class="testTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Input</th>
+
+                    <th>Expected Output</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                ${visibleRows}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <div class="hiddenTests">
+
+        🔒 Hidden Test Cases :
+        ${question.hiddenTestCases.length}
+
+    </div>
+
+    `;
+
+
+
+    /* -----------------------------
+       LOAD CODE
+    ----------------------------- */
+
+    PythonEngine.setQuestion(question);
+
+    restoreSavedCode(question.id);
+
+
+
+    if(
+        !App.session.answers[question.id]
+    ){
+
+        PythonEngine.setCode(
+
+            question.starterCode || ""
+
+        );
+
+    }
+
+
+
+    /* -----------------------------
+       UPDATE UI
+    ----------------------------- */
 
     updateNavigation();
 
@@ -578,8 +720,6 @@ function displayQuestion(){
     updateProgress();
 
 }
-
-
 
 /* =====================================================
    RESTORE SAVED CODE
