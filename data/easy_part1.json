@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "title": "Student Grade",
+    "difficulty": "Easy",
+    "xp": 10,
+    "coins": 5,
+    "scenario": "A school wants to automatically display whether a student has passed the examination.",
+    "task": "Read the marks of a student. Print 'Pass' if the marks are 35 or more; otherwise print 'Fail'.",
+    "inputFormat": "A single integer representing the student's marks.",
+    "outputFormat": "Print Pass or Fail.",
+    "constraints": [
+      "0 ≤ Marks ≤ 100"
+    ],
+    "sampleInput": "42",
+    "sampleOutput": "Pass",
+    "primaryConcept": "Think about the minimum marks required before deciding the result.",
+    "starterCode": "marks = int(input())\n\n# Write your code here\n",
+    "visibleTests": [
+      {
+        "input": "42",
+        "expectedOutput": "Pass"
+      },
+      {
+        "input": "20",
+        "expectedOutput": "Fail"
+      },
+      {
+        "input": "35",
+        "expectedOutput": "Pass"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "input": "99",
+        "expectedOutput": "Pass"
+      },
+      {
+        "input": "34",
+        "expectedOutput": "Fail"
+      },
+      {
+        "input": "100",
+        "expectedOutput": "Pass"
+      },
+      {
+        "input": "0",
+        "expectedOutput": "Fail"
+      },
+      {
+        "input": "75",
+        "expectedOutput": "Pass"
+      },
+      {
+        "input": "10",
+        "expectedOutput": "Fail"
+      },
+      {
+        "input": "35",
+        "expectedOutput": "Pass"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Library Fine",
+    "difficulty": "Easy",
+    "xp": 10,
+    "coins": 5,
+    "scenario": "A library charges a fine based on the number of days a book is returned late.",
+    "task": "Read the number of late days.\nPrint 'No Fine' if days = 0.\nPrint '₹10 Fine' if days are between 1 and 5.\nPrint '₹50 Fine' if days are more than 5.",
+    "inputFormat": "A single integer representing late days.",
+    "outputFormat": "Print the applicable fine.",
+    "constraints": [
+      "0 ≤ Days ≤ 365"
+    ],
+    "sampleInput": "4",
+    "sampleOutput": "₹10 Fine",
+    "primaryConcept": "The number belongs to different ranges. Check the ranges carefully.",
+    "starterCode": "days = int(input())\n\n# Write your code here\n",
+    "visibleTests": [
+      {
+        "input": "0",
+        "expectedOutput": "No Fine"
+      },
+      {
+        "input": "3",
+        "expectedOutput": "₹10 Fine"
+      },
+      {
+        "input": "7",
+        "expectedOutput": "₹50 Fine"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "input": "1",
+        "expectedOutput": "₹10 Fine"
+      },
+      {
+        "input": "5",
+        "expectedOutput": "₹10 Fine"
+      },
+      {
+        "input": "6",
+        "expectedOutput": "₹50 Fine"
+      },
+      {
+        "input": "15",
+        "expectedOutput": "₹50 Fine"
+      },
+      {
+        "input": "0",
+        "expectedOutput": "No Fine"
+      },
+      {
+        "input": "2",
+        "expectedOutput": "₹10 Fine"
+      },
+      {
+        "input": "100",
+        "expectedOutput": "₹50 Fine"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "Employee ID Validator",
+    "difficulty": "Easy",
+    "xp": 10,
+    "coins": 5,
+    "scenario": "A company accepts only employee IDs that start with the letter 'E'.",
+    "task": "Read an employee ID.\nPrint 'Valid' if the first character is 'E', otherwise print 'Invalid'.",
+    "inputFormat": "A single string.",
+    "outputFormat": "Print Valid or Invalid.",
+    "constraints": [
+      "Length of ID ≥ 1"
+    ],
+    "sampleInput": "E102",
+    "sampleOutput": "Valid",
+    "primaryConcept": "Pay attention to the very first character of the given text.",
+    "starterCode": "emp_id = input()\n\n# Write your code here\n",
+    "visibleTests": [
+      {
+        "input": "E102",
+        "expectedOutput": "Valid"
+      },
+      {
+        "input": "A501",
+        "expectedOutput": "Invalid"
+      },
+      {
+        "input": "E999",
+        "expectedOutput": "Valid"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "input": "E1",
+        "expectedOutput": "Valid"
+      },
+      {
+        "input": "B100",
+        "expectedOutput": "Invalid"
+      },
+      {
+        "input": "EABC",
+        "expectedOutput": "Valid"
+      },
+      {
+        "input": "X999",
+        "expectedOutput": "Invalid"
+      },
+      {
+        "input": "EMP01",
+        "expectedOutput": "Valid"
+      },
+      {
+        "input": "employee",
+        "expectedOutput": "Invalid"
+      },
+      {
+        "input": "E",
+        "expectedOutput": "Valid"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "Even Roll Numbers",
+    "difficulty": "Easy",
+    "xp": 10,
+    "coins": 5,
+    "scenario": "A teacher wants to display all even roll numbers up to a given number.",
+    "task": "Read N and print all even numbers from 2 to N separated by a space.",
+    "inputFormat": "A single integer.",
+    "outputFormat": "Even numbers separated by spaces.",
+    "constraints": [
+      "2 ≤ N ≤ 100"
+    ],
+    "sampleInput": "10",
+    "sampleOutput": "2 4 6 8 10",
+    "primaryConcept": "Look for a repeating pattern while moving from the first number to the last.",
+    "starterCode": "n = int(input())\n\n# Write your code here\n",
+    "visibleTests": [
+      {
+        "input": "6",
+        "expectedOutput": "2 4 6"
+      },
+      {
+        "input": "10",
+        "expectedOutput": "2 4 6 8 10"
+      },
+      {
+        "input": "2",
+        "expectedOutput": "2"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "input": "8",
+        "expectedOutput": "2 4 6 8"
+      },
+      {
+        "input": "12",
+        "expectedOutput": "2 4 6 8 10 12"
+      },
+      {
+        "input": "4",
+        "expectedOutput": "2 4"
+      },
+      {
+        "input": "14",
+        "expectedOutput": "2 4 6 8 10 12 14"
+      },
+      {
+        "input": "16",
+        "expectedOutput": "2 4 6 8 10 12 14 16"
+      },
+      {
+        "input": "18",
+        "expectedOutput": "2 4 6 8 10 12 14 16 18"
+      },
+      {
+        "input": "20",
+        "expectedOutput": "2 4 6 8 10 12 14 16 18 20"
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Shopping Bill",
+    "difficulty": "Easy",
+    "xp": 10,
+    "coins": 5,
+    "scenario": "A supermarket wants to calculate the total bill for a customer.",
+    "task": "Create a function calculate_bill(price, quantity) that returns the total amount. Read price and quantity and print the returned value.",
+    "inputFormat": "Two integers representing price and quantity.",
+    "outputFormat": "Print the total bill.",
+    "constraints": [
+      "1 ≤ Price ≤ 10000",
+      "1 ≤ Quantity ≤ 100"
+    ],
+    "sampleInput": "250\n3",
+    "sampleOutput": "750",
+    "primaryConcept": "If the same calculation can be reused, think about grouping it into a separate block.",
+    "starterCode": "def calculate_bill(price, quantity):\n    # Write your code here\n    pass\n\nprice = int(input())\nquantity = int(input())\n\nprint(calculate_bill(price, quantity))\n",
+    "visibleTests": [
+      {
+        "input": "250\n3",
+        "expectedOutput": "750"
+      },
+      {
+        "input": "100\n5",
+        "expectedOutput": "500"
+      },
+      {
+        "input": "80\n2",
+        "expectedOutput": "160"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "input": "1\n1",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "500\n4",
+        "expectedOutput": "2000"
+      },
+      {
+        "input": "999\n2",
+        "expectedOutput": "1998"
+      },
+      {
+        "input": "75\n8",
+        "expectedOutput": "600"
+      },
+      {
+        "input": "450\n10",
+        "expectedOutput": "4500"
+      },
+      {
+        "input": "35\n6",
+        "expectedOutput": "210"
+      },
+      {
+        "input": "1000\n1",
+        "expectedOutput": "1000"
+      }
+    ]
+  }
+]
