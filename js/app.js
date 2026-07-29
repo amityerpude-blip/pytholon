@@ -999,7 +999,7 @@ function displayQuestion(){
 );
 
 updateElement(
-    "questionStatement",
+    "questionTask",
     question.task
 );
 
