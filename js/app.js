@@ -998,7 +998,7 @@ function displayQuestion(){
     question.scenario
 );
 
-updateHTML(
+updateElement(
     "questionStatement",
     question.task
 );
