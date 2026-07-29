@@ -25,10 +25,8 @@ const CONFIG = {
     ----------------------------------------------*/
 
     QUESTION_FOLDER: "data/",
-
-    DEFAULT_LEVEL: "easy",
-
-    QUESTIONS_PER_SESSION: 10,
+QUESTION_SET: "easy_part1",
+QUESTIONS_PER_SESSION: 10,
 
 
     /*----------------------------------------------
