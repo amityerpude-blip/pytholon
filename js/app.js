@@ -973,12 +973,9 @@ function displayQuestion(){
 
 
     updateElement(
-
-        "questionTopic",
-
-        question.topic
-
-    );
+    "questionTopic",
+    question.primaryConcept
+);
 
 
 
