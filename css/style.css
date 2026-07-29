@@ -1105,3 +1105,293 @@ textarea{
     }
 
 }
+/*==================================================
+    PART 6
+    STATUS COLORS
+==================================================*/
+
+.pass{
+
+    color:var(--success)!important;
+
+    font-weight:700;
+
+}
+
+.fail{
+
+    color:var(--danger)!important;
+
+    font-weight:700;
+
+}
+
+.ready{
+
+    color:var(--primary)!important;
+
+    font-weight:700;
+
+}
+
+
+
+/*==================================================
+    UTILITY CLASSES
+==================================================*/
+
+.hidden{
+
+    display:none!important;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.textCenter{
+
+    text-align:center;
+
+}
+
+.fullWidth{
+
+    width:100%;
+
+}
+
+.fullHeight{
+
+    height:100%;
+
+}
+
+
+
+/*==================================================
+    TRANSITIONS
+==================================================*/
+
+button,
+
+.questionCard,
+
+.paletteButton,
+
+.editorCard,
+
+.outputCard{
+
+    transition:all .25s ease;
+
+}
+
+
+
+/*==================================================
+    SELECTION
+==================================================*/
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+
+
+/*==================================================
+    REMOVE OUTLINE
+==================================================*/
+
+button:focus,
+
+textarea:focus{
+
+    outline:none;
+
+}
+
+
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    #mainLayout{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:auto auto;
+
+    }
+
+    .codingPanel{
+
+        grid-template-rows:60% 40%;
+
+    }
+
+}
+
+
+
+@media(max-width:900px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .topHeader{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:15px;
+
+        gap:12px;
+
+    }
+
+    .playerArea{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:12px;
+
+    }
+
+    .questionStrip{
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:10px;
+
+        padding:12px;
+
+        position:relative;
+
+        top:0;
+
+    }
+
+    .questionPalette{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .statusBar{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:12px;
+
+    }
+
+    #mainLayout{
+
+        height:auto;
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bottomBar{
+
+        flex-wrap:wrap;
+
+        height:auto;
+
+        padding:15px;
+
+    }
+
+    .navButton{
+
+        flex:1 1 180px;
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+    .logoArea h1{
+
+        font-size:20px;
+
+    }
+
+    .playerArea{
+
+        font-size:13px;
+
+    }
+
+    .paletteButton{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:13px;
+
+    }
+
+    .cardHeader{
+
+        font-size:14px;
+
+    }
+
+    #codingArea{
+
+        font-size:14px;
+
+    }
+
+    #programOutput{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+
+/*==================================================
+    END OF STYLE.CSS
+==================================================*/
