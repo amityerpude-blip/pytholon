@@ -867,8 +867,6 @@ function saveCurrentState(){
 /* =====================================================
    LOAD QUESTION BANK
 ===================================================== */
-
-async function loadQuestionBank(){
 async function loadQuestionBank(){
 
     try{
