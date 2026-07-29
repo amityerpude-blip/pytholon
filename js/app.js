@@ -997,23 +997,14 @@ function displayQuestion(){
     ------------------------------------------*/
 
     updateHTML(
+    "questionScenario",
+    question.scenario
+);
 
-        "questionScenario",
-
-        question.caseStudy
-
-    );
-
-
-
-    updateHTML(
-
-        "questionStatement",
-
-        question.statement
-
-    );
-
+updateHTML(
+    "questionStatement",
+    question.task
+);
 
 
     updateHTML(
