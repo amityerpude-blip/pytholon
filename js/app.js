@@ -869,6 +869,7 @@ function saveCurrentState(){
 ===================================================== */
 
 async function loadQuestionBank(){
+async function loadQuestionBank(){
 
     try{
 
@@ -876,9 +877,9 @@ async function loadQuestionBank(){
 
             CONFIG.QUESTION_FOLDER +
 
-            CONFIG.DEFAULT_LEVEL +
+            CONFIG.QUESTION_SET +
 
-            "_part1.json"
+            ".json"
 
         );
 
@@ -892,9 +893,13 @@ async function loadQuestionBank(){
 
         }
 
-        App.questionBank =
+        App.questionBank = await response.json();
 
-        await response.json();
+        console.log(
+            "Question Bank Loaded:",
+            App.questionBank.length,
+            "Questions"
+        );
 
     }
 
@@ -903,15 +908,12 @@ async function loadQuestionBank(){
         console.error(error);
 
         alert(
-
             "Question Bank Not Found."
-
         );
 
     }
 
 }
-
 
 
 /* =====================================================
