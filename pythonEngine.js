@@ -461,7 +461,7 @@ PythonEngine.runSingleTest = async function(
 
             output:execution.output,
 
-            expected:test.expectedOutput,
+            expected:test.output,
 
             error:execution.error
 
@@ -473,11 +473,7 @@ PythonEngine.runSingleTest = async function(
 
     const actual =
 
-        this.normalizeOutput(
-
-            execution.output
-
-        );
+        this.normalizeOutput(test.output);
 
 
 
@@ -623,7 +619,7 @@ async function(){
 
         !this.currentQuestion ||
 
-        !this.currentQuestion.visibleTests
+        !this.currentQuestion.visibleTestCases
 
     ){
 
@@ -647,9 +643,7 @@ async function(){
 
     this.runTestSet(
 
-        this.currentQuestion
-
-            .visibleTests
+        this.currentQuestion.visibleTestCases
 
     );
 
@@ -670,7 +664,7 @@ async function(){
 
         !this.currentQuestion ||
 
-        !this.currentQuestion.hiddenTests
+        !this.currentQuestion.hiddenTestCases
 
     ){
 
@@ -694,9 +688,7 @@ async function(){
 
     this.runTestSet(
 
-        this.currentQuestion
-
-            .hiddenTests
+        this.currentQuestion.hiddenTestCases
 
     );
 
